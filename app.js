@@ -71,7 +71,7 @@ mapa_invertido.addEventListener('click', function() {
     tela3.style.display = "block";
 });
 
-/* Botão de voltar */
+/* Botão de voltar para o início */
 
 const voltar = document.querySelector('#voltar');
 
