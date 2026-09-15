@@ -13,7 +13,7 @@ const tela3 = document.querySelector('#tela3');
 const sonic = document.querySelector('.sonic');
 
 sonic.addEventListener('click', function() {
-    avatar.src = "assets/img/sonic.png";
+    avatar.src = "src/assets/img/sonic.png";
 
     tela1.style.display = "none";
 
@@ -26,7 +26,7 @@ sonic.addEventListener('click', function() {
 const superman = document.querySelector('.superman');
 
 superman.addEventListener('click', function() {
-    avatar.src = "assets/img/superman.png";
+    avatar.src = "src/assets/img/superman.png";
 
     tela1.style.display = "none";
 
@@ -39,7 +39,7 @@ superman.addEventListener('click', function() {
 const chapolin = document.querySelector('.chapolin');
 
 chapolin.addEventListener('click', function() {
-    avatar.src = "assets/img/chapolin.png";
+    avatar.src = "src/assets/img/chapolin.png";
 
     tela1.style.display = "none";
 
