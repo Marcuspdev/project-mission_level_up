@@ -7,14 +7,10 @@
 }
 
 body {
-    background-color: #050000;
+    background-color: #080808;
     color: #ffffff;
     font-family: 'Cinzel', 'Georgia', serif;
     overflow: hidden;
-}
-
-.escondido {
-    display: none !important;
 }
 
 /* Container do Vídeo */
@@ -88,4 +84,7 @@ body {
     color: #ffffff;
     border-color: #ff1a1a;
     box-shadow: 0 0 15px #ff0000;
+}
+.escondido {
+    display: none !important;
 }

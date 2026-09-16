@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stranger Things Intro</title>
     <link rel="stylesheet" href="src/css/page1.css">
+    <link rel="stylesheet" href="src/css/page2.css">
 </head>
 <body>
 
@@ -23,17 +24,22 @@
             <button id="btnAvancar" type="button" class="btn-avancar">Pular Vídeo ➔</button>
         </div>
     </section>
+    <section id="secao-boas-vindas" class="secao-boas-vindas escondido">
+    <div class="conteudo-boas-vindas">
+        <h1 class="titulo-neon">BEM-VINDO</h1>
+        <h1 class="titulo-neon">AS COISAS ESTRANHAS</h1>
+        <h1 class="titulo-neon">DO FRONT-END</h1>
 
-    <!-- Tela 1: Escolha de Avatar (Inicialmente Escondida) -->
-    <section id="tela1" class="escondido container-selecao">
-        <h1>Escolha o seu avatar:</h1>
-        <div class="opcoes">
-            <button class="sonic">Sonic</button>
-            <button class="superman">Superman</button>
-            <button class="chapolin">Chapolin</button>
-        </div>
+        <button id="btn-jornada" class="btn-jornada">
+            COMECE SUA JORNADA
+        </button>
+
+        <button id="btn-play-jornada" class="btn-play-circulo" aria-label="Iniciar">
+            <span class="icone-play">▶</span>
+        </button>
+    </div>
     </section>
-
     <script src="src/js/page1.js" defer></script>
+    <script src="src/js/page2.js" defer></script>
 </body>
 </html>
