@@ -3,55 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escolha o seu Avatar</title>
-    <link rel="stylesheet" href="src/css/style.css">
+    <title>Stranger Things Intro</title>
+    <link rel="stylesheet" href="src/css/page1.css">
 </head>
 <body>
-    <section id="tela1">
 
+    <!-- Container do Vídeo -->
+    <section id="tela-video" class="video-container">
+        <video id="meuVideo" autoplay loop muted playsinline class="video-bg">
+            <source src="src/assets/videos/video.mp4" type="video/mp4"/>
+        </video>
+
+        <!-- Botoes Sobrepostos -->
+        <div class="controles-overlay">
+            <div class="grupo-botoes">
+                <button id="btnPlayPause" type="button" class="btn-ctrl">⏸️ Pausar</button>
+                <button id="btnSom" type="button" class="btn-ctrl">🔇 Ativar Som</button>
+            </div>
+            <button id="btnAvancar" type="button" class="btn-avancar">Pular Vídeo ➔</button>
+        </div>
+    </section>
+
+    <!-- Tela 1: Escolha de Avatar (Inicialmente Escondida) -->
+    <section id="tela1" class="escondido container-selecao">
         <h1>Escolha o seu avatar:</h1>
-        <div>
-            <button class="sonic">
-                <h2>Sonic</h2>
-            </button>
-        
-        
-            <button class="superman">
-                <h2>Superman</h2>
-            </button>
-        
-            <button class="chapolin">
-                <h2>Chapolin</h2>
-            </button>
+        <div class="opcoes">
+            <button class="sonic">Sonic</button>
+            <button class="superman">Superman</button>
+            <button class="chapolin">Chapolin</button>
         </div>
-
     </section>
 
-
-    <section id="tela2">
-
-        <h1>Escolha o seu mapa:</h1>
-        <div>
-            <button id="mapa_normal">
-                <h2>Normal</h2>
-            </button>
-        
-            <button id="mapa_invertido">
-                <h2>Invertido</h2>
-            </button>
-        </div>
-
-    </section>
-
-
-    <section id="tela3">
-
-        <img src="" alt="Avatar escolhido" id="avatar"><br>
-
-        <button id="voltar">Início</button>
-
-    </section>
-
-    <script src="src/js/app.js"></script>
+    <script src="src/js/page1.js" defer></script>
 </body>
 </html>
