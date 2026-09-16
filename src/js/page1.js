@@ -1,19 +1,16 @@
-// Aguarda o carregamento do HTML completo
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('meuVideo');
     const btnPlayPause = document.getElementById('btnPlayPause');
     const btnSom = document.getElementById('btnSom');
     const btnAvancar = document.getElementById('btnAvancar');
     
     const telaVideo = document.getElementById('tela-video');
-    const tela1 = document.getElementById('tela1');
+    const secaoBoasVindas = document.getElementById('secao-boas-vindas');
 
-    // Teste de conexão no console
-    console.log("Script carregado com sucesso!");
-
-    // Controlar Play/Pausa
+    // Controles de Play/Pausa
     if (btnPlayPause && video) {
-        btnPlayPause.onclick = () => {
+        btnPlayPause.onclick = (e) => {
+            e.stopPropagation();
             if (video.paused) {
                 video.play();
                 btnPlayPause.textContent = '⏸️ Pausar';
@@ -24,25 +21,31 @@ window.addEventListener('load', () => {
         };
     }
 
-    // Controlar Áudio
+    // Controles de Som
     if (btnSom && video) {
-        btnSom.onclick = () => {
-            if (video.muted) {
-                video.muted = false;
-                btnSom.textContent = '🔊 Som Ligado';
-            } else {
-                video.muted = true;
-                btnSom.textContent = '🔇 Ativar Som';
-            }
+        btnSom.onclick = (e) => {
+            e.stopPropagation();
+            video.muted = !video.muted;
+            btnSom.textContent = video.muted ? '🔇 Ativar Som' : '🔊 Som Ligado';
         };
     }
 
-    // Pular Vídeo
-    if (btnAvancar && telaVideo && tela1) {
-        btnAvancar.onclick = () => {
-            video.pause();
+    // Ação do Botão Pular
+    if (btnAvancar && telaVideo && secaoBoasVindas) {
+        btnAvancar.onclick = (e) => {
+            e.stopPropagation();
+            console.log("Botão pular clicado!");
+            
+            if (video) video.pause();
+
+            // Esconde a tela do vídeo e mostra a de boas-vindas
             telaVideo.classList.add('escondido');
-            tela1.classList.remove('escondido');
+            telaVideo.style.display = 'none';
+
+            secaoBoasVindas.classList.remove('escondido');
+            secaoBoasVindas.style.display = 'flex';
         };
+    } else {
+        console.error("Erro: Um dos elementos da página não foi encontrado pelo ID.");
     }
 });
