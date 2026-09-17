@@ -7,6 +7,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const telaVideo = document.getElementById('tela-video');
     const secaoBoasVindas = document.getElementById('secao-boas-vindas');
 
+    // Função para realizar a transição de tela
+    function irParaProximaTela() {
+        if (video) video.pause();
+
+        if (telaVideo && secaoBoasVindas) {
+            telaVideo.classList.add('escondido');
+            telaVideo.style.display = 'none';
+
+            secaoBoasVindas.classList.remove('escondido');
+            secaoBoasVindas.style.display = 'flex';
+        }
+    }
+
+    // 1. Quando o vídeo chegar ao fim naturalmente
+    if (video) {
+        video.onended = () => {
+            irParaProximaTela();
+        };
+    }
+
+    // 2. Clique no botão de pular vídeo
+    if (btnAvancar) {
+        btnAvancar.onclick = (e) => {
+            e.stopPropagation();
+            irParaProximaTela();
+        };
+    }
+
     // Controles de Play/Pausa
     if (btnPlayPause && video) {
         btnPlayPause.onclick = (e) => {
@@ -28,24 +56,5 @@ document.addEventListener('DOMContentLoaded', () => {
             video.muted = !video.muted;
             btnSom.textContent = video.muted ? '🔇 Ativar Som' : '🔊 Som Ligado';
         };
-    }
-
-    // Ação do Botão Pular
-    if (btnAvancar && telaVideo && secaoBoasVindas) {
-        btnAvancar.onclick = (e) => {
-            e.stopPropagation();
-            console.log("Botão pular clicado!");
-            
-            if (video) video.pause();
-
-            // Esconde a tela do vídeo e mostra a de boas-vindas
-            telaVideo.classList.add('escondido');
-            telaVideo.style.display = 'none';
-
-            secaoBoasVindas.classList.remove('escondido');
-            secaoBoasVindas.style.display = 'flex';
-        };
-    } else {
-        console.error("Erro: Um dos elementos da página não foi encontrado pelo ID.");
     }
 });
