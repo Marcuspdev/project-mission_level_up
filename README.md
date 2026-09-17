@@ -35,7 +35,15 @@ Uma aplicação web interativa inspirada no universo de **Stranger Things**. O p
 * **JavaScript (ES6+):** Controle da API nativa de mídia, manipulação de DOM e gerenciamento das transições de tela.
 
 ---
+## 💻 Como Executar o Projeto
 
+1. **Clonar o repositório:**
+   ```bash
+   git clone [https://github.com/Marcuspdev/project-mission_level_up.git](https://github.com/Marcuspdev/project-mission_level_up.git)
+2. **Rodar o projeto:**
+   ```bash
+   cd project-mission_level_up
+----
 ## 📁 Estrutura do Projeto
 
 ```text
@@ -60,8 +68,5 @@ project-mission_level_up/
 ├── index.html                     # Ponto de entrada da aplicação
 └── README.md                      # Documentação do repositório
 
-## 💻 Como Executar o Projeto
 
-1. **Clonar o repositório:**
-   ```bash
-   git clone [https://github.com/Marcuspdev/project-mission_level_up.git](https://github.com/Marcuspdev/project-mission_level_up.git)
+
