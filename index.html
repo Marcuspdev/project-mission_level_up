@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stranger Things Intro</title>
+    <title>Stranger Things — Frontend Roadmap</title>
     <link rel="stylesheet" href="src/css/page1.css">
     <link rel="stylesheet" href="src/css/page2.css">
+    <link rel="stylesheet" href="src/css/page3.css">
 </head>
 <body>
 
-    <!-- Container do Vídeo -->
+    <!-- SECÇÃO 1: Vídeo de Abertura -->
     <section id="tela-video" class="video-container">
         <video id="meuVideo" autoplay muted playsinline class="video-bg">
             <source src="src/assets/videos/video.mp4" type="video/mp4"/>
         </video>
 
-        <!-- Botoes Sobrepostos -->
         <div class="controles-overlay">
             <div class="grupo-botoes">
                 <button id="btnPlayPause" type="button" class="btn-ctrl">⏸️ Pausar</button>
@@ -24,21 +24,105 @@
             <button id="btnAvancar" type="button" class="btn-avancar">Pular Vídeo ➔</button>
         </div>
     </section>
+
+    <!-- SECÇÃO 2: Boas-Vindas -->
     <section id="secao-boas-vindas" class="secao-boas-vindas escondido">
-    <div class="conteudo-boas-vindas">
-        <h1 class="titulo-neon">BEM-VINDO</h1>
-        <h1 class="titulo-neon">AS COISAS ESTRANHAS</h1>
-        <h1 class="titulo-neon">DO FRONT-END</h1>
+        <div class="conteudo-boas-vindas">
+            <h1 class="titulo-neon">BEM-VINDO</h1>
+            <h1 class="titulo-neon">ÀS COISAS ESTRANHAS</h1>
+            <h1 class="titulo-neon">DO FRONT-END</h1>
 
-        <button id="btn-jornada" class="btn-jornada">
-            COMECE SUA JORNADA
-        </button>
+            <button id="btn-jornada" class="btn-jornada">
+                COMECE SUA JORNADA
+            </button>
 
-        <button id="btn-play-jornada" class="btn-play-circulo" aria-label="Iniciar">
-            <span class="icone-play">▶</span>
-        </button>
-    </div>
+            <button id="btn-play-jornada" class="btn-play-circulo" aria-label="Iniciar">
+                <span class="icone-play">▶</span>
+            </button>
+        </div>
     </section>
+
+    <!-- SECÇÃO 3: Escolha de Avatar -->
+    <section id="choiceavatar" class="secao-selecao escondido">
+        <h2 class="titulo-pagina">ESCOLHA SEU AVATAR</h2>
+
+        <div class="container-cards">
+            <!-- Card Dustin -->
+            <article id="dustin" class="card-personagem">
+                <h3 class="nome-personagem">DUSTIN</h3>
+                <img class="img-avatar" src="src/assets/images/imgdustin.jpg" alt="Dustin">
+                <span class="xp-texto">XP: 0/200</span>
+                <div class="barra-fora">
+                    <div class="barra-dentro"></div>
+                </div>
+                <h4 class="titulo-atributos">ATRIBUTOS:</h4>
+                <ul class="lista-atributos">
+                    <li>INTELIGENTE</li>
+                    <li>AVENTUREIRO</li>
+                    <li>EXPLORADOR</li>
+                </ul>
+            </article>
+
+            <!-- Card Eddie -->
+            <article id="eddie" class="card-personagem">
+                <h3 class="nome-personagem">EDDIE</h3>
+                <img class="img-avatar" src="src/assets/images/imgeddie.jpg" alt="Eddie">
+                <span class="xp-texto">XP: 0/200</span>
+                <div class="barra-fora">
+                    <div class="barra-dentro"></div>
+                </div>
+                <h4 class="titulo-atributos">ATRIBUTOS:</h4>
+                <ul class="lista-atributos">
+                    <li>CORAJOSO</li>
+                    <li>VALENTE</li>
+                    <li>HERÓI</li>
+                </ul>
+            </article>
+
+            <!-- Card Gorgon -->
+            <article id="gorgon" class="card-personagem">
+                <h3 class="nome-personagem">GORGON</h3>
+                <img class="img-avatar" src="src/assets/images/imgorgon.jpg" alt="Gorgon">
+                <span class="xp-texto">XP: 0/200</span>
+                <div class="barra-fora">
+                    <div class="barra-dentro"></div>
+                </div>
+                <h4 class="titulo-atributos">ATRIBUTOS:</h4>
+                <ul class="lista-atributos">
+                    <li>FEROZ</li>
+                    <li>VORAZ</li>
+                    <li>RÁPIDO</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- SECÇÃO 4: Escolha de Mundo -->
+    <section id="choiceword" class="secao-selecao escondido">
+        <h2 class="titulo-pagina">ESCOLHA SEU MUNDO</h2>
+
+        <div class="container-cards">
+            <!-- Mundo Normal -->
+            <article id="mundo-normal" class="card-mundo normal">
+                <h3 class="nome-mundo">MUNDO NORMAL</h3>
+                <img class="img-mundo" src="src/assets/images/escolhanormal.jpg" alt="Mundo Normal">
+                <p class="descricao-mundo">
+                    CENÁRIO CONHECIDO E ILUMINADO.<br>EXPLORE SEM MEDO.
+                </p>
+            </article>
+
+            <!-- Mundo Invertido -->
+            <article id="mundo-invertido" class="card-mundo invertido">
+                <h3 class="nome-mundo inverso">MUNDO INVERTIDO</h3>
+                <img class="img-mundo" src="src/assets/images/escolhainvertida.jpg" alt="Mundo Invertido">
+                <p class="descricao-mundo inverso">
+                    UMA VERSÃO SOMBRIA E DISTORCIDA.<br>CUIDADO COM OS PERIGOS.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Scripts da aplicação -->
     <script src="src/js/page1.js" defer></script>
     <script src="src/js/page2.js" defer></script>
 </body>
