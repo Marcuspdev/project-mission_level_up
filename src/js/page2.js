@@ -2,15 +2,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnJornada = document.getElementById('btn-jornada');
     const btnPlayJornada = document.getElementById('btn-play-jornada');
     const secaoBoasVindas = document.getElementById('secao-boas-vindas');
-    const tela1 = document.getElementById('tela1'); // Próxima tela (Seleção de Avatares)
+    const secaoAvatar = document.getElementById('choiceavatar'); // ID atualizado para corresponder ao HTML
 
     function avançarParaAvatares() {
-        if (secaoBoasVindas && tela1) {
+        if (secaoBoasVindas && secaoAvatar) {
             secaoBoasVindas.classList.add('escondido');
-            tela1.classList.remove('escondido');
+            secaoAvatar.classList.remove('escondido');
         }
     }
 
-    if (btnJornada) btnJornada.onclick = avançarParaAvatares;
-    if (btnPlayJornada) btnPlayJornada.onclick = avançarParaAvatares;
+    if (btnJornada) {
+        btnJornada.addEventListener('click', avançarParaAvatares);
+    }
+    
+    if (btnPlayJornada) {
+        btnPlayJornada.addEventListener('click', avançarParaAvatares);
+    }
 });
