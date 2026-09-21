@@ -44,19 +44,19 @@ const mundoNormal = document.querySelector('#mundo-normal');
 const mundoInvertido = document.querySelector('#mundo-invertido');
 
 function avancarParaMapa() {
-    window.location.href = "pages/mapa.html?avatar=" + avatar + "&mundo=" + mundo;
+    window.location.href = "pages/" + mundo + ".html?avatar=" + avatar;
 }
 
 if(mundoNormal) {
     mundoNormal.addEventListener('click', function() {
-        mundo = "normal";
+        mundo = "mundo-normal";
         avancarParaMapa();
     });
 }
 
 if(mundoInvertido) {
     mundoInvertido.addEventListener('click', function() {
-        mundo = "invertido";
+        mundo = "mundo-invertido";
         avancarParaMapa()
     });
 }
