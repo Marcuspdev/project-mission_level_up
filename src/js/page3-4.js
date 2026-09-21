@@ -9,6 +9,7 @@ const gorgon = document.querySelector('#gorgon');
 
 let avatar = '';
 let mundo = '';
+let nivel = 0;
 
 function avancarParaMundos() {
     if (secaoAvatar && secaoMundo) {
@@ -43,20 +44,15 @@ const mundoNormal = document.querySelector('#mundo-normal');
 
 const mundoInvertido = document.querySelector('#mundo-invertido');
 
-function avancarParaMapa() {
-    window.location.href = "pages/mapa.html?avatar=" + avatar + "&mundo=" + mundo;
-}
-
 if(mundoNormal) {
     mundoNormal.addEventListener('click', function() {
-        mundo = "normal";
-        avancarParaMapa();
+        window.location.href = "pages/mundo-normal.html?avatar=" + avatar + "&nivel=" + nivel;
     });
 }
 
 if(mundoInvertido) {
     mundoInvertido.addEventListener('click', function() {
-        mundo = "invertido";
-        avancarParaMapa()
+        mundo = "";
+        window.location.href = "pages/mundo-invertido.html?avatar=" + avatar + "&nivel=" + nivel;
     });
 }
