@@ -44,6 +44,8 @@ const mundoNormal = document.querySelector('#mundo-normal');
 
 const mundoInvertido = document.querySelector('#mundo-invertido');
 
+
+
 if(mundoNormal) {
     mundoNormal.addEventListener('click', function() {
         window.location.href = "pages/mundo-normal.html?avatar=" + avatar + "&nivel=" + nivel;
@@ -52,7 +54,6 @@ if(mundoNormal) {
 
 if(mundoInvertido) {
     mundoInvertido.addEventListener('click', function() {
-        mundo = "";
         window.location.href = "pages/mundo-invertido.html?avatar=" + avatar + "&nivel=" + nivel;
     });
 }

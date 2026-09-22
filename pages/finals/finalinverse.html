@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../src/css/finals.css">
+    <title>Final - Mundo Invertido</title>
+</head>
+<body>
+
+    <audio autoplay loop id="final-music">
+        <source src="../../src/assets/audios/finalinverseaudio.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="final-inverse">
+    <div class="relampago-overlay"></div>
+    <div class="tv-scanlines"></div>
+    <img src="../../src/assets/images/finalinverse.png" alt="Final Mundo Invertido">
+    </section>
+
+    <!-- Botão Flutuante de Áudio -->
+    <button id="btn-audio" class="btn-audio" onclick="alternarAudio()">
+        <span id="icone-audio">🔊</span>
+    </button>
+
+    <script>
+      window.addEventListener('click', () => {
+        const audio = document.getElementById('final-music');
+        audio.play();
+      }, { once: true });
+    </script>
+
+</body>
+</html>

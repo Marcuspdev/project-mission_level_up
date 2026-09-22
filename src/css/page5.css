@@ -1,5 +1,114 @@
-.img {
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+}
+
+a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {color: crimson;}
+
+#back {
+    font-family: 'Press Start 2P', monospace;
+    font-size: medium;
+    display: flex;
+    padding: 8px;
+    animation: piscar 2s infinite;
+    position: absolute; top: 10px; left: 10px;
+    border: solid;
+}
+
+
+.vidas {
+    display: flex;
+    position: absolute; left: 1335px; bottom: 665px; 
+}
+
+#vidas {
+    width: 250px;
+    height: 160px;
+}
+
+#cabeça {
+    width: 180px;
+    height: 94px;
+    display: flex;
+    animation: piscar 2s infinite;
+    position: absolute; left: 1260px; bottom: 710px;
+}
+
+.avatar {
+    width: 200px;
+    height: 180px;
+    display: flex;
+    position: absolute; left: 274px; bottom: 400px;
+}
+
+.barra-fora {
+    position: absolute; left: 14px; top: 60px;
+    width: 22%;
+    height: 14px;
+    background-color: #0b2222;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    animation: piscar 2s infinite;
+}
+
+.barra-dentro {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+    background-color: #ffff00;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+
+button {
+    border: none;
+    color: rgb(236, 5, 5);
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.fases {
+    display: flex;
+    position: absolute;
+}
+
+#normal1 { left: 20%;   bottom: 49%; }
+#normal2 { left: 37%;  bottom: 11%; }
+#normal3 { left: 60.5%;  bottom: 34.1%; }
+#normal4 { left: 53.2%;  bottom: 40%; }
+#normal5 { left: 74.8%;  bottom: 50%; }
+#normal6 { left: 52.1%;  bottom: 17%; }
+
+#mapanormal img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@keyframes piscar {
+  0%, 100% {opacity: 1; }
+  50% {opacity: 0; }}
