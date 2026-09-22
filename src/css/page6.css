@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+}
+
+a {
+    color: crimson;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgb(110, 0, 174);
+}
+
+
+
+.barra-fora {
+    position: absolute; left: 14px; top: 60px;
+    width: 22%;
+    height: 14px;
+    background-color: #0b2222;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    animation: piscar 2s infinite;
+}
+
+.barra-dentro {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+    background-color: #ffff00;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+#back {
+    font-family: 'Press Start 2P', monospace;
+    font-size: medium;
+    display: flex;
+    padding: 8px;
+    color:  crimson;
+    animation: piscar 2s infinite;
+    position: absolute; top: 10px; left: 10px;
+    border: solid;
+}
+
+#back:hover { color: rgb(110, 0, 174); }
+
+.vidas {
+    display: flex;
+    position: absolute; left: 1335px; bottom: 665px; 
+}
+
+#vidas {
+    width: 250px;
+    height: 160px;
+}
+
+#cabeça {
+    width: 180px;
+    height: 94px;
+    display: flex;
+    animation: piscar 2s infinite;
+    position: absolute; left: 1260px; bottom: 710px;
+}
+
+.avatar {
+    width: 200px;
+    height: 180px;
+    display: flex;
+    position: absolute; left: 110px; bottom: 530px;
+}
+
+button {
+    border: none;
+    color: rgb(236, 5, 5);
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.fases {
+    display: flex;
+    position: absolute;
+}
+
+
+
+#invertido1 { left: 9%;   bottom: 67%; }
+#invertido2 { left: 29%;  bottom: 42%; }
+#invertido3 { left: 47.1%;  bottom: 47%; }
+#invertido4 { left: 63.5%;  bottom: 40%; }
+#invertido5 { left: 86%;  bottom: 65.5%; }
+
+#mapainvertido img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
+@keyframes piscar {
+    0%, 100% {opacity: 1;}
+  50% {opacity: 0; }}
