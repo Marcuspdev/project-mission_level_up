@@ -53,6 +53,7 @@ a:hover {color: crimson;}
     height: 180px;
     display: flex;
     position: absolute; left: 274px; bottom: 400px;
+    z-index: 1;
 }
 
 .barra-fora {

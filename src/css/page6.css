@@ -80,6 +80,7 @@ a:hover {
     height: 180px;
     display: flex;
     position: absolute; left: 110px; bottom: 530px;
+    z-index: 1;
 }
 
 button {
