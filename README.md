@@ -60,6 +60,7 @@ project-mission_level_up/
   ```bash
  cd project-mission_level_up
 ```
-3. Clicar no código HTML
+3. **Acessar o index html**
+
 ## 📄 Licença
 Este projeto é voltado para fins educacionais e de portfólio. Todos os direitos sobre os elementos visuais da série pertencem aos seus respectivos criadores.
