@@ -41,19 +41,24 @@ if(gorgon) {
 // Quando o mundo for escolhido
 
 const mundoNormal = document.querySelector('#mundo-normal');
-
 const mundoInvertido = document.querySelector('#mundo-invertido');
-
+const audioMundoInvertido = new Audio('src/assets/audios/mundoinvertidoaudio.mp3');
 
 
 if(mundoNormal) {
     mundoNormal.addEventListener('click', function() {
         window.location.href = "pages/mundo-normal.html?avatar=" + avatar + "&nivel=" + nivel;
     });
-}
+};
 
 if(mundoInvertido) {
     mundoInvertido.addEventListener('click', function() {
         window.location.href = "pages/mundo-invertido.html?avatar=" + avatar + "&nivel=" + nivel;
     });
-}
+    mundoInvertido.addEventListener('mouseenter', function() {
+        audioMundoInvertido.play();
+    });
+    mundoInvertido.addEventListener('mouseleave', function() {
+        audioMundoInvertido.pause();
+    });
+};
