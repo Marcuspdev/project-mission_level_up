@@ -1,20 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/fases.css">
-    <title> Mundo Invertido - Fase 4 </title>
+    <title>Mundo Invertido • Fase 4: Manipulação do DOM e classList</title>
+    <link rel="stylesheet" href="../../css/fases-mundo.invertido.css">
 </head>
 <body>
-    <section>
-        <h1> Aqui ficará o título </h1>
-    </section>
 
-    <section> <video> </video> </section>
+    <main class="study-container">
+        
+        <h1 class="main-title">MUNDO INVERTIDO • FASE 4<br>DOM & A API CLASSLIST</h1>
 
-    <spam class="mensagem-erro"></spam>
-    <spam class="mensagem-acerto"> </spam>
+        <!-- INTRODUÇÃO CONTINUA -->
+        <p>
+            O DOM (Document Object Model) é a interface de programação que representa a estrutura de um documento HTML como uma árvore de objetos. Através do JavaScript, podemos selecionar elementos dessa árvore e modificar suas propriedades, textos e estilos em tempo real para responder às ações do usuário.
+        </p>
 
+        <h2 class="section-title">1. A Má Prática de Alterar Estilos Diretos</h2>
+        <p>
+            Muitos iniciantes tendem a alterar o visual de um elemento modificando a propriedade <code>element.style</code> via JS (ex: <code>elemento.style.color = "red"</code>). Embora funcione, essa prática insere estilos no-line no HTML, o que dificulta a manutenção e fere a boa prática da separação de responsabilidades (HTML para estrutura, CSS para estilo e JS para comportamento).
+        </p>
+
+        <h2 class="section-title">2. A Solução Limpa: O Objeto classList</h2>
+        <p>
+            A forma mais limpa e profissional de alterar a aparência de um elemento é definir as classes de estilo no arquivo CSS e usar o JavaScript para **adicionar** ou **remover** essas classes dinamicamente. Para isso, utilizamos a propriedade <code>classList</code>.
+        </p>
+
+        <p>Principais métodos do <code>classList</code>:</p>
+        <ul class="topic-list">
+            <li><code>classList.add('nome-da-classe')</code>: Adiciona uma ou mais classes ao elemento.</li>
+            <li><code>classList.remove('nome-da-classe')</code>: Remove uma classe do elemento.</li>
+            <li><code>classList.toggle('nome-da-classe')</code>: Alterna a classe: se ela já existir, é removida; se não existir, é adicionada.</li>
+            <li><code>classList.contains('nome-da-classe')</code>: Retorna um valor booleano (<code>true</code> ou <code>false</code>) indicando se o elemento possui aquela classe.</li>
+        </ul>
+
+        <h2 class="section-title">3. Exemplo Prático de Código</h2>
+        <p>Veja como é simples alternar o tema ou o estado de um alerta no clique de um botão usando <code>toggle</code>:</p>
+
+<pre>// 1. Seleciona os elementos do DOM
+const botaoAlerta = document.querySelector('#btn-alerta');
+const caixaMensagem = document.querySelector('.caixa-mensagem');
+
+// 2. Adiciona o ouvinte de evento (Event Listener)
+botaoAlerta.addEventListener('click', () => {
+    // Alterna a classe 'alerta-ativo' no elemento
+    caixaMensagem.classList.toggle('alerta-ativo');
+});</pre>
+
+        <h2 class="section-title">4. Demonstração Prática</h2>
+        <p>Clique no botão abaixo para disparar o método <code>classList.toggle('ativo')</code> e alterar o estado visual da caixa:</p>
+
+        <div class="demo-area">
+            <button class="btn-next" id="btn-toggle" style="font-size:0.65rem; margin-bottom:15px;">
+                EXECUTAR .classList.toggle()
+            </button>
+
+            <div id="toggle-box" style="background:#000; color:#fff; border:1px solid #ff0033; padding:20px; text-align:center; transition:all 0.3s ease;">
+                ESTADO ATUAL: PADRÃO (CLASSE DESATIVADA)
+            </div>
+        </div>
+
+        <!-- LINKS DE APROFUNDAMENTO -->
+        <h2 class="section-title">5. Material de Estudo Complementar</h2>
+        <p>Consulte a documentação e tutoriais focados em boas práticas de manipulação da árvore DOM:</p>
+
+        <div class="links-section">
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Element/classList" target="_blank">🔗 MDN Web Docs - Element.classList API</a><br>
+            Referência oficial detalhando suporte a navegadores e métodos como replace().</p>
+
+            <p><a href="https://www.w3schools.com/jsref/prop_element_classlist.asp" target="_blank">🔗 W3Schools - HTML DOM Element classList</a><br>
+            Exemplos práticos de uso do classList para criar menus retráteis e modais.</p>
+
+            <p><a href="https://javascript.info/modifying-document" target="_blank">🔗 JavaScript.info - Modifying the Document</a><br>
+            Aprofundamento sobre criação, inserção e remoção de nós do DOM com performance.</p>
+        </div>
+
+        <!-- QUIZ EXCLUSIVAMENTE NO FINAL -->
+        <section class="quiz-container">
+            <h2 class="section-title">QUIZ DE FIXAÇÃO DE CONTEÚDO</h2>
+            
+            <p class="quiz-question">
+                1. Qual método do <code>classList</code> verifica se um elemento possui uma determinada classe e retorna <code>true</code> ou <code>false</code>?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-btn" data-correct="false">A) classList.has()</button>
+                <button class="quiz-btn" data-correct="true">B) classList.contains()</button>
+                <button class="quiz-btn" data-correct="false">C) classList.check()</button>
+            </div>
+
+            <p class="quiz-question" style="margin-top: 25px;">
+                2. Por que é considerado uma boa prática usar <code>classList</code> em vez de alterar o estilo diretamente com <code>element.style</code>?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-btn" data-correct="true">A) Mantém a separação entre CSS (estilos) e JavaScript (comportamento), facilitando a manutenção.</button>
+                <button class="quiz-btn" data-correct="false">B) Porque o elemento não consome memória RAM ao usar classes.</button>
+                <button class="quiz-btn" data-correct="false">C) Porque o método element.style foi descontinuado nos navegadores modernos.</button>
+            </div>
+        </section>
+
+        <!-- NAVEGAÇÃO -->
+        <div class="nav-section">
+            <a href="inver-fase5.html" class="btn-next">IR PARA A FASE 5: ARRAYS & FOREACH ➔</a>
+        </div>
+
+    </main>
+
+    <script src="../../js/fases-mundo.invertido.js"></script>
 </body>
 </html>
