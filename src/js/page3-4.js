@@ -47,7 +47,7 @@ const audioMundoInvertido = new Audio('src/assets/audios/mundoinvertidoaudio.mp3
 
 if(mundoNormal) {
     mundoNormal.addEventListener('click', function() {
-        window.location.href = "src/mundo-normal.html?avatar=" + avatar + "&nivel=" + nivel;
+        window.location.href = "src/pages/mundo-normal.html?avatar=" + avatar + "&nivel=" + nivel;
     });
 };
 
