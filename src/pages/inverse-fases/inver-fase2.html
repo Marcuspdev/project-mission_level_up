@@ -1,19 +1,148 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/fases.css">
-    <title> Mundo Invertido - Fase 2 </title>
+    <title>Mundo Invertido • Fase 2: Flexbox Layout</title>
+    <link rel="stylesheet" href="../../css/fases-mundo.invertido.css">
 </head>
 <body>
-    <section>
-        <h1> Aqui ficará o título </h1>
-    </section>
 
-    <section> <video> </video></section>
-  
-    <spam class="mensagem-erro"></spam>
-    <spam class="mensagem-acerto"> </spam>
+    <main class="study-container">
+        
+        <h1 class="main-title">MUNDO INVERTIDO • FASE 2<br>LAYOUT CSS: FLEXBOX</h1>
+
+        <!-- INTRODUÇÃO CONTINUA -->
+        <p>
+            Antes do surgimento do Flexbox (Flexible Box Layout Module), alinhar elementos lado a lado ou centralizar um bloco verticalmente no CSS exigia o uso de "hacks" complexos, como tabelas, float e posicionamento absoluto. O Flexbox foi criado especificamente para resolver esses problemas de alinhamento unidimensional (em linha ou em coluna) de forma simples e responsiva.
+        </p>
+
+        <h2 class="section-title">1. A Relação Container vs. Itens</h2>
+        <p>
+            O conceito fundamental do Flexbox baseia-se na relação entre o elemento pai (chamado de <strong>Flex Container</strong>) e seus elementos filhos diretos (chamados de <strong>Flex Items</strong>).
+        </p>
+        <p>
+            Para ativar o Flexbox, aplicamos a propriedade <code>display: flex;</code> no elemento pai. A partir desse instante, todos os seus filhos diretos passam a obedecer às regras do modelo flexível.
+        </p>
+
+        <h2 class="section-title">2. Os Dois Eixos do Flexbox</h2>
+        <p>
+            Diferente de outros modelos do CSS, o Flexbox trabalha com dois eixos ortogonais:
+        </p>
+        <ul class="topic-list">
+            <li><strong>Eixo Principal (Main Axis):</strong> É o eixo primário ao longo do qual os itens flexíveis são dispostos. Por padrão, ele corre na horizontal (da esquerda para a direita).</li>
+            <li><strong>Eixo Cruzado (Cross Axis):</strong> É o eixo perpendicular ao eixo principal. Por padrão, corre na vertical (de cima para baixo).</li>
+        </ul>
+        <p>
+            A propriedade <code>flex-direction</code> permite alterar a direção do eixo principal. Se usarmos <code>flex-direction: column;</code>, o eixo principal passa a ser vertical.
+        </p>
+
+        <h2 class="section-title">3. Alinhamento no Eixo Principal com justify-content</h2>
+        <p>
+            A propriedade <code>justify-content</code> define como o espaço livre restante no container será distribuído entre os itens flexíveis ao longo do eixo principal. Os valores mais comuns são:
+        </p>
+        <ul class="topic-list">
+            <li><code>flex-start</code>: Empurra todos os itens para o início do container (padrão).</li>
+            <li><code>center</code>: Centraliza todos os itens no meio do container.</li>
+            <li><code>flex-end</code>: Empurra todos os itens para o final do container.</li>
+            <li><code>space-between</code>: Distribui os itens uniformemente, colando o primeiro no início e o último no fim.</li>
+            <li><code>space-around</code>: Distribui os itens com espaçamentos iguais ao redor de cada um.</li>
+        </ul>
+
+        <h2 class="section-title">4. Alinhamento no Eixo Cruzado com align-items</h2>
+        <p>
+            Enquanto o <code>justify-content</code> cuida do eixo principal, a propriedade <code>align-items</code> controla o alinhamento dos itens no eixo cruzado. Ela aceita valores como <code>center</code> (centraliza verticalmente), <code>flex-start</code> (alinha no topo) e <code>stretch</code> (estica os itens para preencher a altura).
+        </p>
+
+        <h2 class="section-title">5. Código Exemplo</h2>
+        <p>Veja como centralizar perfeitamente um elemento no centro exato da tela utilizando apenas três linhas de Flexbox no container pai:</p>
+
+<pre>/* Container Pai */
+.painel-central {
+    display: flex;
+    justify-content: center; /* Centraliza no eixo horizontal */
+    align-items: center;     /* Centraliza no eixo vertical */
+    min-height: 200px;
+    border: 2px solid #ff0033;
+    background-color: #000000;
+}
+
+/* Itens Filhos */
+.item-painel {
+    background-color: #1a0005;
+    color: #ffffff;
+    padding: 15px 25px;
+    border: 1px solid #ff0033;
+}</pre>
+
+        <h2 class="section-title">6. Demonstração Prática</h2>
+        <p>Selecione abaixo um valor para <code>justify-content</code> e observe como o container redistribui os itens flexíveis:</p>
+
+        <div class="demo-area">
+            <label style="display:block; font-size:0.85rem; margin-bottom:10px; color:var(--st-red);">
+                Alterar justify-content:
+            </label>
+            <select id="select-align" style="background:#000; color:#fff; border:1px solid #ff0033; padding:8px; width:100%; max-width:300px; margin-bottom:20px; font-family:monospace;">
+                <option value="center">center</option>
+                <option value="space-between">space-between</option>
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+            </select>
+
+            <div id="flex-demo" style="display:flex; justify-content:center; align-items:center; background:#000; border:1px solid #ff0033; padding:20px; min-height:80px; gap:10px;">
+                <div style="background:#ff0033; color:#000; padding:10px 15px; font-weight:bold;">ITEM 1</div>
+                <div style="background:#800019; color:#fff; padding:10px 15px; font-weight:bold; border:1px solid #ff0033;">ITEM 2</div>
+            </div>
+        </div>
+
+        <!-- LINKS DE APROFUNDAMENTO -->
+        <h2 class="section-title">7. Material de Estudo Complementar</h2>
+        <p>Estude mais a fundo sobre flex-grow, flex-shrink e criação de malhas responsivas com os materiais indicados:</p>
+
+        <div class="links-section">
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank">🔗 MDN Web Docs - Conceitos Básicos do Flexbox</a><br>
+            Guia completo detalhando o funcionamento dos eixos principal e cruzado.</p>
+
+            <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">🔗 CSS-Tricks - A Complete Guide to Flexbox</a><br>
+            O guia visual de referência mais famoso da web para consulta de propriedades flex.</p>
+
+            <p><a href="https://flexboxfroggy.com/#pt-br" target="_blank">🔗 Flexbox Froggy - Jogo Educativo Interativo</a><br>
+            Aprenda e treine suas habilidades em Flexbox escrevendo código CSS para salvar sapinhos.</p>
+
+            <p><a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">🔗 W3Schools - CSS Flexbox Container</a><br>
+            Tutorial passo a passo com exemplos práticos editáveis diretamente no navegador.</p>
+        </div>
+
+        <!-- QUIZ EXCLUSIVAMENTE NO FINAL -->
+        <section class="quiz-container">
+            <h2 class="section-title">QUIZ DE FIXAÇÃO DE CONTEÚDO</h2>
+            
+            <p class="quiz-question">
+                1. Qual propriedade CSS é responsável por distribuir os elementos flexíveis ao longo do EIXO PRINCIPAL (Main Axis)?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-btn" data-correct="false">A) align-items</button>
+                <button class="quiz-btn" data-correct="true">B) justify-content</button>
+                <button class="quiz-btn" data-correct="false">C) flex-direction</button>
+            </div>
+
+            <p class="quiz-question" style="margin-top: 25px;">
+                2. O que acontece com os elementos filhos quando aplicamos <code>flex-direction: column;</code> no container?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-btn" data-correct="true">A) O eixo principal passa a ser vertical, alinhando os itens de cima para baixo.</button>
+                <button class="quiz-btn" data-correct="false">B) Os elementos são ocultados da tela temporariamente.</button>
+                <button class="quiz-btn" data-correct="false">C) Os itens passam a se comportar como tabelas estáticas.</button>
+            </div>
+        </section>
+
+        <!-- NAVEGAÇÃO -->
+        <div class="nav-section">
+            <a href="inver-fase3.html" class="btn-next">IR PARA A FASE 3: ARROW FUNCTIONS ➔</a>
+        </div>
+
+    </main>
+
+    <script src="../../js/fases-mundo.invertido.js"></script>
 </body>
 </html>

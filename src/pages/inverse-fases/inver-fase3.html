@@ -1,19 +1,119 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/fases.css">
-    <title> Mundo Invertido - Fase 3 </title>
+    <title>Mundo Invertido • Fase 3: Arrow Functions</title>
+    <link rel="stylesheet" href="../../css/fases-mundo.invertido.css">
 </head>
 <body>
-    <section>
-        <h1> Aqui ficará o título </h1>
-    </section>
 
-    <section> <video> </video> </section>
-    
-    <spam class="mensagem-erro"></spam>
-    <spam class="mensagem-acerto"> </spam>
+    <main class="study-container">
+        
+        <h1 class="main-title">MUNDO INVERTIDO • FASE 3<br>JAVASCRIPT ES6: ARROW FUNCTIONS (=>)</h1>
+
+        <!-- INTRODUÇÃO CONTINUA -->
+        <p>
+            Com o lançamento da atualização ES6 (ECMAScript 2015), o JavaScript ganhou diversas melhorias sintáticas e funcionais. Uma das adições mais importantes e utilizadas até hoje foi a <strong>Arrow Function</strong> (função flecha), que trouxe uma forma mais concisa e elegante de declarar funções na linguagem.
+        </p>
+
+        <h2 class="section-title">1. Sintaxe Tradicional vs. Arrow Function</h2>
+        <p>
+            Nas versões mais antigas do JavaScript, para declararmos uma função, obrigatoriamente utilizávamos a palavra-chave <code>function</code>. Com a sintaxe de flecha (<code>=></code>), o código fica consideravelmente mais enxuto.
+        </p>
+        <p>
+            Observe a comparação direta entre as duas abordagens declarando uma mesma lógica de cálculo:
+        </p>
+
+<pre>// 1. SINTAXE TRADICIONAL (Antiga)
+function calcularDano(base, bonus) {
+    return base + bonus;
+}
+
+// 2. ARROW FUNCTION (Moderna)
+const calcularDano = (base, bonus) => {
+    return base + bonus;
+};</pre>
+
+        <h2 class="section-title">2. Retorno Implícito (Implicit Return)</h2>
+        <p>
+            Uma das características mais poderosas das Arrow Functions é o <strong>retorno implícito</strong>. Quando o corpo da função possui apenas uma única instrução/expressão, podemos omitir as chaves <code>{}</code> e a instrução <code>return</code>. O JavaScript entende automaticamente que o resultado daquela linha deve ser retornado.
+        </p>
+
+<pre>// Função de linha única com retorno implícito
+const dobrar = numero => numero * 2;
+
+console.log(dobrar(5)); // Retorna 10</pre>
+
+        <h2 class="section-title">3. Escopo do 'this' Léxico</h2>
+        <p>
+            Além da economia de linhas, existe uma diferença funcional crítica: Arrow Functions não possuem seu próprio contexto de <code>this</code>. Elas herdam o <code>this</code> do escopo onde foram criadas (escopo léxico).
+        </p>
+        <p>
+            Em funções tradicionais, o valor de <code>this</code> muda dependendo de quem chamou a função (ex: um botão no DOM). Já em Arrow Functions, o <code>this</code> permanece fixo e atrelado ao escopo pai, o que evita bugs em callbacks e temporizadores.
+        </p>
+
+        <h2 class="section-title">4. Quando NÃO Usar Arrow Functions</h2>
+        <ul class="topic-list">
+            <li><strong>Métodos de Objetos:</strong> Como a arrow function não tem seu próprio <code>this</code>, ela não conseguirá acessar as propriedades do próprio objeto via <code>this.propriedade</code>.</li>
+            <li><strong>Constructors / Protótipos:</strong> Arrow Functions não podem ser chamadas com o operador <code>new</code>.</li>
+        </ul>
+
+        <h2 class="section-title">5. Demonstração Prática</h2>
+        <p>Digite uma mensagem no campo abaixo para ser processada por uma Arrow Function em tempo real:</p>
+
+        <div class="demo-area">
+            <input type="text" id="input-fn-name" placeholder="DIGITE UM TEXTO AQUI..." style="background:#000; color:#fff; border:1px solid #ff0033; padding:10px; width:100%; max-width:350px; font-family:monospace; margin-bottom:15px;">
+            <br>
+            <button class="btn-next" id="btn-run-fn" style="font-size:0.6rem; padding:10px 20px;">EXECUTAR ARROW FUNCTION</button>
+            <p id="output-fn" style="margin-top:15px; color:var(--st-red); font-weight:bold; font-family:monospace;"></p>
+        </div>
+
+        <!-- LINKS DE APROFUNDAMENTO -->
+        <h2 class="section-title">6. Material de Estudo Complementar</h2>
+        <p>Aprofunde seu conhecimento sobre escopo lexical, binding e evolução do ES6:</p>
+
+        <div class="links-section">
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">🔗 MDN Web Docs - Guia Completo de Arrow Functions</a><br>
+            Análise detalhada sobre limitações, argumentos e sintaxe avançada.</p>
+
+            <p><a href="https://javascript.info/arrow-functions-basics" target="_blank">🔗 JavaScript.info - Arrow Functions Basics</a><br>
+            Tutorial didático e interativo focado na lógica de funções anônimas.</p>
+
+            <p><a href="https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d17beb050d5/" target="_blank">🔗 FreeCodeCamp - Quando usar e quando evitar Arrow Functions</a><br>
+            Artigo focado nos erros mais comuns cometidos por iniciantes em JS.</p>
+        </div>
+
+        <!-- QUIZ EXCLUSIVAMENTE NO FINAL -->
+        <section class="quiz-container">
+            <h2 class="section-title">QUIZ DE FIXAÇÃO DE CONTEÚDO</h2>
+            
+            <p class="quiz-question">
+                1. Qual é a sintaxe do operador responsável por caracterizar uma Arrow Function no ES6?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-btn" data-correct="false">A) -></button>
+                <button class="quiz-btn" data-correct="true">B) =></button>
+                <button class="quiz-btn" data-correct="false">C) ==></button>
+            </div>
+
+            <p class="quiz-question" style="margin-top: 25px;">
+                2. Em uma Arrow Function de apenas uma linha sem chaves <code>{}</code>, qual instrução é executada automaticamente?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-btn" data-correct="true">A) Retorno implícito (implicit return) do resultado da linha.</button>
+                <button class="quiz-btn" data-correct="false">B) Criação automática de uma variável global.</button>
+                <button class="quiz-btn" data-correct="false">C) Impressão do resultado no console do navegador.</button>
+            </div>
+        </section>
+
+        <!-- NAVEGAÇÃO -->
+        <div class="nav-section">
+            <a href="inver-fase4.html" class="btn-next">IR PARA A FASE 4: MANIPULAÇÃO DO DOM ➔</a>
+        </div>
+
+    </main>
+
+    <script src="../../js/fases-mundo.invertido.js"></script>
 </body>
 </html>

@@ -81,15 +81,7 @@ a:hover {
     width: auto;
     height: 180px;
     display: flex;
-    position: absolute; left: 7.5%; bottom: 68%;
-    z-index: 1;
-}
-
-.avatar {
-    width: 200px;
-    height: 180px;
-    display: flex; /* apagar: -3% -15% */
-    position: absolute; left: 6%; bottom: 52%;
+    position: absolute; left: 7%; bottom: 69%;
     z-index: 1;
 }
 

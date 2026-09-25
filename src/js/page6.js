@@ -23,24 +23,24 @@ const nivelInvertido5 = document.querySelector('#invertido5');
 // Muda a posição do Avatar segundo seu nível
 
 if (nivelAtual == 1) {
-    avatarImg.style.left = '6%'
-    avatarImg.style.bottom = '52%'
+    avatarImg.style.left = '7%'
+    avatarImg.style.bottom = '69%'
 }
 else if (nivelAtual == 2) {
-    avatarImg.style.left = '26%'
-    avatarImg.style.bottom = '27%'
+    avatarImg.style.left = '27%'
+    avatarImg.style.bottom = '44%'
 }
 else if (nivelAtual == 3) {
-    avatarImg.style.left = '44.1%'
-    avatarImg.style.bottom = '32%'
+    avatarImg.style.left = '45.1%'
+    avatarImg.style.bottom = '49%'
 }
 else if (nivelAtual == 4) {
-    avatarImg.style.left = '60.5%'
-    avatarImg.style.bottom = '25%'
+    avatarImg.style.left = '61.5%'
+    avatarImg.style.bottom = '42%'
 }
 else if (nivelAtual == 5) {
-    avatarImg.style.left = '83%'
-    avatarImg.style.bottom = '50.5%'}
+    avatarImg.style.left = '84%'
+    avatarImg.style.bottom = '67.5%'}
 
 // Verifica em qual nível o jogador está e desabilita os níveis anteriores & Redireciona para a página correspondente ao nível invertido selecionado, passando o avatar e o nível como parâmetros na URL
 
