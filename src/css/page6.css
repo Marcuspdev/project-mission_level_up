@@ -57,36 +57,38 @@ a:hover {
 
 #back:hover { color: rgb(110, 0, 174); }
 
-.vidas {
+#cabeça-vidas {
+    position: absolute; right: 30px; top: 40px;
     display: flex;
-    position: absolute; left: 1335px; bottom: 665px; 
+    align-items: center;
+    gap: 30px;
 }
 
 #vidas {
-    width: 250px;
-    height: 160px;
+    width: 140px;
+    height: auto;
 }
 
 #cabeça {
-    width: 180px;
+    width: 94px;
     height: 94px;
     display: flex;
+    align-items: center;
     animation: piscar 2s infinite;
-    position: absolute; left: 1260px; bottom: 710px;
 }
 
-.avatar {
-    width: 200px;
+#avatar {
+    width: auto;
     height: 180px;
     display: flex;
-    position: absolute; left: 110px; bottom: 530px;
+    position: absolute; left: 7%; bottom: 69%;
     z-index: 1;
 }
 
 button {
-    border: none;
+    border: 2px solid rgb(236, 5, 5);
     color: rgb(236, 5, 5);
-    background: transparent;
+    background: purple;
     cursor: pointer;
     outline: none;
     width: 60px;

@@ -29,30 +29,31 @@ a:hover {color: crimson;}
     border: solid;
 }
 
-
-.vidas {
+#cabeça-vidas {
+    position: absolute; right: 30px; top: 40px;
     display: flex;
-    position: absolute; left: 1335px; bottom: 665px; 
+    align-items: center;
+    gap: 30px;
 }
 
 #vidas {
-    width: 250px;
-    height: 160px;
+    width: 140px;
+    height: auto;
 }
 
 #cabeça {
-    width: 180px;
+    width: 94px;
     height: 94px;
     display: flex;
+    align-items: center;
     animation: piscar 2s infinite;
-    position: absolute; left: 1260px; bottom: 710px;
 }
 
-.avatar {
-    width: 200px;
+#avatar {
+    width: auto;
     height: 180px;
     display: flex;
-    position: absolute; left: 274px; bottom: 400px;
+    position: absolute; left: 18%; bottom: 52%;
     z-index: 1;
 }
 
@@ -79,13 +80,13 @@ a:hover {color: crimson;}
 
 
 button {
-    border: none;
+    border: 2px solid rgb(236, 5, 5);
     color: rgb(236, 5, 5);
-    background: transparent;
+    background: yellow;
     cursor: pointer;
     outline: none;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
@@ -95,12 +96,12 @@ button {
     position: absolute;
 }
 
-#normal1 { left: 20%;   bottom: 49%; }
-#normal2 { left: 37%;  bottom: 11%; }
-#normal3 { left: 60.5%;  bottom: 34.1%; }
-#normal4 { left: 53.2%;  bottom: 40%; }
-#normal5 { left: 74.8%;  bottom: 50%; }
-#normal6 { left: 52.1%;  bottom: 17%; }
+#normal0 { left: 20%;   bottom: 49%; }
+#normal1 { left: 37%;  bottom: 11%; }
+#normal2 { left: 60.5%;  bottom: 34.1%; }
+#normal3 { left: 53.2%;  bottom: 40%; }
+#normal4 { left: 74.8%;  bottom: 50%; }
+#normal5 { left: 52.1%;  bottom: 17%; }
 
 #mapanormal img {
   width: 100vw;
