@@ -1,0 +1,287 @@
+:root {
+    /* Paleta Stranger Things */
+    --st-red: #ff1e27;
+    --st-red-glow: rgba(255, 30, 39, 0.6);
+    --st-dark-bg: #070913;
+    --card-bg-dark: #0f172a;
+    --card-border: #1e293b;
+    --card-body-bg: #1e293b;
+    --text-gold: #fbbf24;
+    --tag-bg: #334155;
+    --tag-text: #f8fafc;
+    --xp-gold: #f59e0b;
+    --font-pixel: 'Press Start 2P', monospace;
+    --font-sans: 'Anek Telugu', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--st-dark-bg);
+    /* Gradiente que remete ao Mundo Invertido */
+    background-image: 
+        radial-gradient(circle at 50% 20%, rgba(255, 30, 39, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(15, 23, 42, 0.8) 0%, var(--st-dark-bg) 100%);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header com efeito Néon de Stranger Things */
+.header-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-family: var(--font-pixel);
+    font-size: 1.6rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    /* Efeito de iluminação Néon Vermelho */
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px var(--st-red),
+        0 0 30px var(--st-red),
+        0 0 40px var(--st-red);
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.page-subtitle {
+    font-family: var(--font-pixel);
+    font-size: 0.65rem;
+    color: #94a3b8;
+    letter-spacing: 1.5px;
+}
+
+/* Grid de Cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Estrutura do Card */
+.player-card {
+    background-color: var(--card-bg-dark);
+    border: 3px solid var(--st-red);
+    border-radius: 16px;
+    width: 320px;
+    padding: 12px;
+    /* Brilho ao redor do card */
+    box-shadow: 0 0 15px var(--st-red-glow), inset 0 0 10px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 25px var(--st-red), 0 10px 20px rgba(0,0,0,0.9);
+}
+
+/* Cabeçalho do Card */
+.card-header {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px 6px 4px;
+}
+
+.card-type {
+    font-family: var(--font-pixel);
+    font-size: 0.7rem;
+    color: #f8fafc;
+    letter-spacing: 1px;
+}
+
+.trophy-icon {
+    font-size: 1.2rem;
+}
+
+.mission-title {
+    font-family: var(--font-pixel);
+    font-size: 0.65rem;
+    color: var(--text-gold);
+    line-height: 1.4;
+    text-shadow: 2px 2px 0px #000;
+}
+
+/* Corpo Interno do Card */
+.card-body {
+    background-color: var(--card-body-bg);
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 14px;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Foto e Infos */
+.profile-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.avatar-box {
+    width: 95px;
+    height: 95px;
+    background-color: #0f172a;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid var(--st-red);
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3px;
+}
+
+.label {
+    font-family: var(--font-pixel);
+    font-size: 0.5rem;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.tag-value {
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #475569;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Barra de XP */
+.xp-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.xp-labels {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    color: #e2e8f0;
+}
+
+.xp-bar-bg {
+    background-color: #0f172a;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #475569;
+}
+
+.xp-bar-fill {
+    background: linear-gradient(90deg, #f59e0b, #ff1e27);
+    height: 100%;
+    border-radius: 6px;
+}
+
+/* Competências */
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skills-title {
+    font-family: var(--font-pixel);
+    font-size: 0.48rem;
+    color: #94a3b8;
+}
+
+.skills-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0f172a;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    font-family: var(--font-pixel);
+    font-size: 1rem;
+}
+
+/* Botões Sociais */
+.social-section {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.btn-social {
+    flex: 1;
+    text-align: center;
+    padding: 8px 4px;
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.btn-social.github {
+    background-color: #334155;
+    border-color: #475569;
+}
+
+.btn-social.github:hover {
+    background-color: #475569;
+    border-color: #94a3b8;
+}
+
+.btn-social.instagram {
+    background-color: #831843;
+    border-color: #be185d;
+}
+
+.btn-social.instagram:hover {
+    background-color: #be185d;
+}
+
+.btn-social.full-width {
+    flex: none;
+    width: 100%;
+}
