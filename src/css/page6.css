@@ -21,12 +21,17 @@ a:hover {
     color:rgb(110, 0, 174);
 }
 
-
+.mapainvertido-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
 
 .barra-fora {
-    position: absolute; left: 14px; top: 60px;
-    width: 22%;
-    height: 14px;
+    position: absolute; left: 1%; top: 7%;
+    width: 28%;
+    height: 2%;
     background-color: #0b2222;
     border: 2px solid #ffffff;
     border-radius: 10px;
@@ -59,7 +64,7 @@ a:hover {
 
 .vidas {
     display: flex;
-    position: absolute; left: 1335px; bottom: 665px; 
+    position: absolute; left: 111.5%; bottom: 83%; 
 }
 
 #vidas {
@@ -72,15 +77,14 @@ a:hover {
     height: 94px;
     display: flex;
     animation: piscar 2s infinite;
-    position: absolute; left: 1260px; bottom: 710px;
+    position: absolute; left: 105%; bottom: 88.5%;
 }
 
 .avatar {
     width: 200px;
     height: 180px;
     display: flex;
-    position: absolute; left: 110px; bottom: 530px;
-    z-index: 1;
+    position: absolute; left: 09%; bottom: 69%;
 }
 
 button {
@@ -99,13 +103,23 @@ button {
     position: absolute;
 }
 
+.fases button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 130px;  
+    height: 130px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
 
 
-#invertido1 { left: 9%;   bottom: 67%; }
-#invertido2 { left: 29%;  bottom: 42%; }
-#invertido3 { left: 47.1%;  bottom: 47%; }
-#invertido4 { left: 63.5%;  bottom: 40%; }
-#invertido5 { left: 86%;  bottom: 65.5%; }
+#invertido1 { left: 11.5%;   bottom: 67%; }
+#invertido2 { left: 37%;  bottom: 42%; }
+#invertido3 { left: 60%;  bottom: 47%; }
+#invertido4 { left: 81%;  bottom: 40%; }
+#invertido5 { left: 109.5%;  bottom: 65.5%; }
 
 #mapainvertido img {
   width: 100vw;
