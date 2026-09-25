@@ -1,65 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Normal • Nível 5: Eventos & DOM</title>
-    <link rel="stylesheet" href="../../css/fases.css">
+    <title>Mundo Normal • Fase 5: Listas e Tabelas</title>
+    <link rel="stylesheet" href="../../css/fases-mundo.normal.css">
 </head>
 <body>
-    <h1 class="page-title">NÍVEL 5: EVENTOS & DOM</h1>
 
-    <div class="container">
-        <div class="cards-grid">
+    <main class="study-container">
+        
+        <h1 class="main-title">MUNDO NORMAL • FASE 5<br>ORGANIZAÇÃO: LISTAS & TABELAS</h1>
+
+        <p>
+            Para estruturar dados complexos ou agrupamentos de itens, o HTML oferece elementos específicos para listas ordenadas, não ordenadas e tabelas de dados.
+        </p>
+
+        <h2 class="section-title">1. Listas Não Ordenadas (&lt;ul&gt;) e Ordenadas (&lt;ol&gt;)</h2>
+        <p>
+            Usamos <code>&lt;ul&gt;</code> quando a ordem dos itens não importa (exibidos com marcadores) e <code>&lt;ol&gt;</code> quando a sequência numérica é relevante. Os itens individuais de ambas são inseridos com a tag <code>&lt;li&gt;</code> (list item).
+        </p>
+
+        <h2 class="section-title">2. Estrutura de Tabelas (&lt;table&gt;)</h2>
+        <p>
+            As tabelas organizam dados em linhas (<code>&lt;tr&gt;</code>) e colunas de dados (<code>&lt;td&gt;</code>) ou cabeçalho (<code>&lt;th&gt;</code>).
+        </p>
+
+<pre>&lt;!-- Lista Ordenada --&gt;
+&lt;ol&gt;
+    &lt;li&gt;Primeiro Passo&lt;/li&gt;
+    &lt;li&gt;Segundo Passo&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Tabela Simples --&gt;
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nome&lt;/th&gt;
+        &lt;th&gt;Pontuação&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Alice&lt;/td&gt;
+        &lt;td&gt;100&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+        <h2 class="section-title">3. Material de Estudo Complementar</h2>
+        <div class="links-section">
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_Text_Formatting" target="_blank">🔗 MDN Web Docs - Listas em HTML</a><br>
+            Aprenda a aninhar listas e personalizar marcadores CSS.</p>
+
+            <p><a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">🔗 W3Schools - HTML Tables Tutorial</a><br>
+            Aprenda a utilizar colspan e rowspan para mesclar células de tabelas.</p>
+        </div>
+
+        <section class="quiz-container">
+            <h2 class="section-title">QUIZ DE FIXAÇÃO DE CONTEÚDO</h2>
             
-            <div class="arcade-card">
-                <div class="card-header-title">O QUE É O DOM</div>
-                <div class="inner-frame">
-                    <p style="font-size:0.55rem; color:#aaa; line-height:1.4;">Representação HTML editável via JavaScript em tempo real.</p>
-                </div>
-                <div class="xp-section">
-                    <div class="xp-text">PROGRESSO: 100/200 XP</div>
-                    <div class="xp-bar-container"><div class="xp-bar-fill" style="width: 50%;"></div></div>
-                </div>
-                <div class="attributes-title">MÉTODOS:</div>
-                <ul class="attributes-list">
-                    <li>QUERYSELECTOR</li>
-                    <li>INNERTEXT</li>
-                </ul>
+            <p class="quiz-question">
+                1. Qual tag HTML é utilizada para criar uma lista NÃO ORDENADA (com marcadores de pontos)?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-btn" data-correct="true">A) &lt;ul&gt;</button>
+                <button class="quiz-btn" data-correct="false">B) &lt;ol&gt;</button>
+                <button class="quiz-btn" data-correct="false">C) &lt;list&gt;</button>
             </div>
 
-            <div class="arcade-card">
-                <div class="card-header-title">TESTADOR DOM</div>
-                <div class="inner-frame">
-                    <p id="dom-target-text" style="font-size:0.55rem; color:#fff;">TEXTO INICIAL</p>
-                    <button class="btn-arcade" id="btn-change-dom" style="font-size:0.5rem; padding:8px;">MUDAR TEXTO</button>
-                </div>
-                <div class="attributes-title">AÇÃO:</div>
-                <ul class="attributes-list">
-                    <li>CLIQUE (CLICK)</li>
-                    <li>ALTERAÇÃO</li>
-                </ul>
+            <p class="quiz-question" style="margin-top: 25px;">
+                2. Numa tabela HTML, qual tag representa uma LINHA da tabela?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-btn" data-correct="false">A) &lt;td&gt;</button>
+                <button class="quiz-btn" data-correct="true">B) &lt;tr&gt;</button>
+                <button class="quiz-btn" data-correct="false">C) &lt;th&gt;</button>
             </div>
+        </section>
 
-            <div class="arcade-card">
-                <div class="card-header-title">DESAFIO</div>
-                <div class="inner-frame">
-                    <p style="font-size:0.55rem; line-height:1.4;">Qual escuta um clique na tela?</p>
-                </div>
-                <button class="quiz-option-btn" data-correct="true">ADDEVENTLISTENER</button>
-                <button class="quiz-option-btn" data-correct="false">SELECTALL</button>
-                <div class="attributes-title" style="margin-top:10px;">RECOMPENSA:</div>
-                <ul class="attributes-list">
-                    <li>+50 XP</li>
-                </ul>
-            </div>
-
+        <div class="nav-section">
+            <a href="nor-fase6.html" class="btn-next">IR PARA A FASE 6: VARIÁVEIS JS ➔</a>
         </div>
 
-        <div style="text-align: center;">
-            <a href="page6-arrays.html" class="btn-arcade">PRÓXIMA PÁGINA: ARRAYS & FUNÇÕES ➔</a>
-        </div>
-    </div>
-    <script src="../js/script.js"></script>
+    </main>
+
+    <script src="../../js/fases-mundo.normal.js"></script>
 </body>
 </html>

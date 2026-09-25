@@ -1,23 +1,118 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/fases.css">
-    <title> Mundo Invertido - Fase 5 </title>
+    <title>Mundo Invertido • Fase 5: Arrays e o Método forEach()</title>
+    <link rel="stylesheet" href="../../css/fases-mundo.invertido.css">
 </head>
 <body>
-    <section>
-        <h1> Aqui ficará o título </h1>
-    </section>
 
-    <section> <video> </video> </section>
+    <main class="study-container">
+        
+        <h1 class="main-title">MUNDO INVERTIDO • FASE 5<br>ARRAYS & O MÉTODO FOREACH()</h1>
 
-    <div class="mensagem-erro"></div>
-    <div class="mensagem-acerto"> </div>
+        <!-- INTRODUÇÃO CONTINUA -->
+        <p>
+            Em JavaScript, um **Array** é uma estrutura de dados utilizada para armazenar uma coleção ordenada de valores (como números, textos, objetos ou até outros arrays) sob o nome de uma única variável. Saber iterar (percorrer) e manipular listas de dados é uma das habilidades mais vitais no desenvolvimento de software.
+        </p>
 
-     <button type="button" class="concluir-mapa"> </button>
+        <h2 class="section-title">1. Do Loop 'for' Tradicional ao forEach()</h2>
+        <p>
+            Historicamente, para percorrer os itens de um array, utilizávamos o laço de repetição <code>for</code> tradicional com uma variável de controle de índice (<code>let i = 0</code>).
+        </p>
+        <p>
+            Embora o <code>for</code> ainda seja válido, o JavaScript moderno oferece métodos de alta ordem (Higher-Order Functions) integrados aos arrays, como o <code>.forEach()</code>, que tornam o código muito mais legível e declarativo.
+        </p>
 
-</body> 
+        <h2 class="section-title">2. Como Funciona o forEach()</h2>
+        <p>
+            O método <code>.forEach()</code> executa uma função de callback fornecida uma vez para cada elemento presente no array, em ordem ascendente do índice.
+        </p>
+
+        <p>A função de callback passada para o <code>forEach()</code> aceita até três parâmetros:</p>
+        <ul class="topic-list">
+            <li><strong>elemento (obrigatório):</strong> O item atual do array sendo processado na iteração.</li>
+            <li><strong>índice (opcional):</strong> A posição numérica do item no array (começando em 0).</li>
+            <li><strong>array completo (opcional):</strong> A referência ao próprio array que está sendo percorrido.</li>
+        </ul>
+
+        <h2 class="section-title">3. Exemplo Prático de Código</h2>
+        <p>Veja como é limpo percorrer uma lista de equipamentos do Mundo Invertido combinando <code>forEach()</code> e Arrow Function:</p>
+
+<pre>const inventario = ['Lanterna', 'Rádio Woki-Toki', 'Bússola', 'Mochila'];
+
+// Percorrendo o Array com forEach
+inventario.forEach((item, indice) => {
+    console.log(`Equipamento #${indice + 1}: ${item}`);
+});</pre>
+
+        <h2 class="section-title">4. Diferença Crucial: forEach() vs. map()</h2>
+        <p>
+            É muito comum confundir o <code>forEach()</code> com o método <code>map()</code>. Lembre-se desta regra fundamental:
+        </p>
+        <ul class="topic-list">
+            <li><strong>forEach():</strong> É usado para executar efeitos colaterais (como imprimir no console, alterar o DOM ou salvar dados). Ele **não retorna nada** (retorna <code>undefined</code>).</li>
+            <li><strong>map():</strong> É usado para **transformar** dados. Ele processa a lista e **retorna um novo array** de mesmo tamanho contendo os resultados modificados.</li>
+        </ul>
+
+        <h2 class="section-title">5. Demonstração Prática</h2>
+        <p>Clique no botão para disparar o método <code>.forEach()</code> em uma lista de itens e renderizar os resultados formatados:</p>
+
+        <div class="demo-area">
+            <button class="btn-next" id="btn-loop-arr" style="font-size:0.65rem; margin-bottom:15px;">
+                EXECUTAR INVENTARIO.FOREACH()
+            </button>
+
+            <div id="output-loop" style="background:#000; color:var(--st-red); border:1px solid #ff0033; padding:15px; font-family:monospace; min-height:50px; font-weight:bold;">
+                AGUARDANDO EXECUÇÃO...
+            </div>
+        </div>
+
+        <!-- LINKS DE APROFUNDAMENTO -->
+        <h2 class="section-title">6. Material de Estudo Complementar</h2>
+        <p>Continue seus estudos aprendendo outros métodos essenciais de array como <code>filter()</code>, <code>reduce()</code> e <code>find()</code>:</p>
+
+        <div class="links-section">
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">🔗 MDN Web Docs - Array.prototype.forEach()</a><br>
+            Documentação técnica oficial sobre assinaturas do método e comportamentos com arrays esparsos.</p>
+
+            <p><a href="https://javascript.info/array-methods" target="_blank">🔗 JavaScript.info - Array Methods Guide</a><br>
+            Um dos melhores tutoriais da web cobrindo adição, remoção, busca e ordenação de arrays.</p>
+
+            <p><a href="https://www.w3schools.com/js/js_array_iteration.asp" target="_blank">🔗 W3Schools - JavaScript Array Iteration</a><br>
+            Exemplos e comparações lado a lado de forEach, map, filter e reduce.</p>
+        </div>
+
+        <!-- QUIZ EXCLUSIVAMENTE NO FINAL -->
+        <section class="quiz-container">
+            <h2 class="section-title">QUIZ DE FIXAÇÃO DE CONTEÚDO</h2>
+            
+            <p class="quiz-question">
+                1. O método <code>.forEach()</code> gera e retorna um novo array com os elementos modificados ao final da execução?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-btn" data-correct="false">A) Sim, sempre retorna uma nova cópia do array original.</button>
+                <button class="quiz-btn" data-correct="true">B) Não, ele apenas executa uma função para cada item e retorna undefined.</button>
+            </div>
+
+            <p class="quiz-question" style="margin-top: 25px;">
+                2. Quais são os dois primeiros parâmetros passados para a função de callback do <code>forEach()</code>?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-btn" data-correct="true">A) O item/elemento atual e o seu respectivo índice no array.</button>
+                <button class="quiz-btn" data-correct="false">B) O tamanho do array e a cor do texto.</button>
+                <button class="quiz-btn" data-correct="false">C) O objeto window e a tag HTML.</button>
+            </div>
+        </section>
+
+        <!-- NAVEGAÇÃO -->
+        <div class="nav-section">
+            <a href="../mundo-invertido.html" class="btn-next" style="background:#ffffff; color:#ff0033;">CONCLUIR MUNDO INVERTIDO 🏆</a>
+        </div>
+
+    </main>
+
+    <script src="../../js/fases-mundo.invertido.js"></script>
+</body>
 </html>
- 

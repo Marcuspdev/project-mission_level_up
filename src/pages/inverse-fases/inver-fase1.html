@@ -1,25 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/fases.css">
-    <title> Mundo Invertido - Fase 1 </title>
+    <title>Mundo Invertido • Fase 1: Efeitos e Transições CSS</title>
+    <link rel="stylesheet" href="../../css/fases-mundo.invertido.css">
 </head>
 <body>
-    <section>
-        <h1> Aqui ficará o título </h1>
-    </section>
 
-    <section><video> </video></section>
+    <main class="study-container">
+        
+        <h1 class="main-title">MUNDO INVERTIDO • FASE 1<br>EFEITOS VISUAIS: HOVER & TRANSITION</h1>
 
+        <!-- INTRODUÇÃO CONTINUA -->
+        <p>
+            No desenvolvimento web frontend, criar uma interface viva e reativa é essencial. Quando um usuário navega por uma página, ele espera receber confirmações visuais de que seus comandos estão sendo percebidos pelo sistema. No CSS, conseguimos esse dinamismo combinando pseudo-classes de estado com propriedades de transição.
+        </p>
+
+        <h2 class="section-title">1. A Pseudo-classe :hover</h2>
+        <p>
+            A pseudo-classe <code>:hover</code> é acionada automaticamente pelo navegador no exato momento em que o usuário posiciona o cursor do mouse sobre um elemento HTML. Ela permite sobrescrever estilos CSS padrão apenas durante a interação.
+        </p>
+        <p>
+            Sem uma transição configurada, a mudança visual acontece de forma instantânea (em 0 milissegundos). Por exemplo, alterar a cor de fundo de preto para vermelho ocorre de maneira seca e abrupta.
+        </p>
+
+        <h2 class="section-title">2. A Propriedade transition</h2>
+        <p>
+            Para suavizar essa troca de estado e criar animações agradáveis, utilizamos a propriedade <code>transition</code>. Ela instrui o navegador a calcular os quadros intermediários entre o estado original do elemento e o novo estado definido no <code>:hover</code>.
+        </p>
+
+        <p>A propriedade <code>transition</code> aceita quatro valores principais:</p>
+        
+        <ul class="topic-list">
+            <li><strong>transition-property:</strong> Qual propriedade CSS será animada (ex: <code>background-color</code>, <code>transform</code>, <code>opacity</code> ou <code>all</code> para todas).</li>
+            <li><strong>transition-duration:</strong> O tempo que a animação levará para ser concluída (ex: <code>0.3s</code>, <code>500ms</code>).</li>
+            <li><strong>transition-timing-function:</strong> A aceleração da animação (ex: <code>ease</code>, <code>linear</code>, <code>ease-in-out</code>).</li>
+            <li><strong>transition-delay:</strong> Um tempo de espera opcional antes do início da animação.</li>
+        </ul>
+
+        <h2 class="section-title">3. Transformações com transform</h2>
+        <p>
+            Além de mudar cores, é muito comum alterar a forma ou posição dos elementos no <code>:hover</code>. A propriedade <code>transform</code> permite aplicar efeitos geométricos como:
+        </p>
+        <ul class="topic-list">
+            <li><code>scale(1.1)</code>: Aumenta o tamanho do elemento em 10%.</li>
+            <li><code>translateY(-5px)</code>: Move o elemento 5 pixels para cima.</li>
+            <li><code>rotate(5deg)</code>: Rotaciona o elemento em 5 graus.</li>
+        </ul>
+
+        <h2 class="section-title">4. Exemplo Completo de Código</h2>
+        <p>Abaixo veja a implementação correta. Note que a regra <code>transition</code> deve ser declarada no elemento principal (fora do hover) para que o efeito de suavidade funcione tanto na entrada quanto na saída do mouse:</p>
+
+<pre>/* Estado Padrão do Botão */
+.botao-invertido {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ff0033;
+    padding: 12px 24px;
     
-    <button type="button" class="opcao-incorreta"> </button>
-    <button type="button" class="opcao-correta"> </button>
-    <button type="button" class="continuar"> Continuar </button>
+    /* Configura animação suave para QUALQUER mudança em 0.4 segundos */
+    transition: all 0.4s ease;
+}
 
-    <spam class="mensagem-erro"></spam>
-    <spam class="mensagem-acerto"> </spam>
+/* Estado no Momento da Interação */
+.botao-invertido:hover {
+    background-color: #ff0033;
+    color: #000000;
+    transform: scale(1.08); /* Aumenta levemente */
+    box-shadow: 0 0 15px #ff0033; /* Adiciona iluminação vermelha */
+}</pre>
 
+        <h2 class="section-title">5. Demonstração Prática</h2>
+        <p>Passe o cursor ou toque no elemento abaixo para testar o efeito de transição em tempo real:</p>
+
+        <div class="demo-area">
+            <div class="interactive-element">
+                PASSE O MOUSE AQUI
+            </div>
+        </div>
+
+        <!-- SEÇÃO DE LINKS DE APROFUNDAMENTO -->
+        <h2 class="section-title">6. Material de Estudo Complementar</h2>
+        <p>Para se aprofundar e entender o funcionamento técnico por trás dos motores de renderização CSS, consulte a documentação e os guias detalhados abaixo:</p>
+
+        <div class="links-section">
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/transition" target="_blank">🔗 MDN Web Docs - Guia de Transições CSS</a><br>
+            A documentação oficial completa detalhando cada subpropriedade de transição e curvas de velocidade.</p>
+
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/:hover" target="_blank">🔗 MDN Web Docs - Pseudo-classe :hover</a><br>
+            Entenda como a pseudo-classe se comporta em dispositivos touch e diferentes navegadores.</p>
+
+            <p><a href="https://css-tricks.com/almanac/properties/t/transition/" target="_blank">🔗 CSS-Tricks - Almanaque de Transições</a><br>
+            Exemplos visuais de performance e truques para evitar travamentos em animações complexas.</p>
+
+            <p><a href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">🔗 W3Schools - CSS3 Transitions Tutorial</a><br>
+            Exercícios práticos interativos para treinar alterações de largura, altura e velocidade.</p>
+        </div>
+
+        <!-- QUIZ EXCLUSIVAMENTE NO FINAL -->
+        <section class="quiz-container">
+            <h2 class="section-title">QUIZ DE FIXAÇÃO DE CONTEÚDO</h2>
+            
+            <p class="quiz-question">
+                1. Onde a propriedade <code>transition</code> deve ser declarada para que a animação ocorra de forma suave TANTO na entrada quanto na saída do cursor do mouse?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-btn" data-correct="false">A) Exclusivamente dentro da regra com a pseudo-classe :hover.</button>
+                <button class="quiz-btn" data-correct="true">B) Na classe principal/base do elemento CSS.</button>
+                <button class="quiz-btn" data-correct="false">C) Em uma tag &lt;script&gt; no JavaScript.</button>
+            </div>
+
+            <p class="quiz-question" style="margin-top: 25px;">
+                2. Qual valor da propriedade <code>transform</code> é utilizado para aumentar o tamanho de um elemento durante o :hover?
+            </p>
+            <div class="quiz-options">
+                <button class="quiz-option-btn quiz-btn" data-correct="false">A) transform: resize(1.1);</button>
+                <button class="quiz-option-btn quiz-btn" data-correct="true">B) transform: scale(1.1);</button>
+                <button class="quiz-option-btn quiz-btn" data-correct="false">C) transform: expand(110%);</button>
+            </div>
+        </section>
+
+        <!-- NAVEGAÇÃO -->
+        <div class="nav-section">
+            <a href="inver-fase2.html" class="btn-next">IR PARA A FASE 2: FLEXBOX ➔</a>
+        </div>
+
+    </main>
+
+    <script src="../../js/fases-mundo.invertido.js"></script>
 </body>
 </html>
