@@ -9,5 +9,5 @@ const nivelAtual = dados.get('nivel');
 const avatarImg = document.querySelector('#avatar');
 
 if (avatarEscolhido) {
-    avatarImg.src = "../src/assets/images/cabeça" + avatarEscolhido + ".png"
+    avatarImg.src = "../assets/images/cabeça" + avatarEscolhido + ".png"
 }
