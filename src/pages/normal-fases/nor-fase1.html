@@ -1,19 +1,149 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/fases.css">
-    <title> Mundo Normal - Fase 1 </title>
+    <title>Guia Interativo: Primeiros Passos com o HTML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/fases.css">
 </head>
 <body>
-    <section>
-        <h1> Aqui ficará o título </h1>
-    </section>
 
-    <section><video> </video></section>
+    <!-- BARRA DE PROGRESSO DE LEITURA -->
+    <div id="progress-bar"></div>
 
-    <spam class="mensagem-erro"></spam>
-    <spam class="mensagem-acerto"> </spam>
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header>
+        <span class="badge">Nível 1 • Front-End</span>
+        <h1>Primeiros Passos com o HTML</h1>
+        <p>Aprenda a construir a estrutura da web com interatividade, código ao vivo e desafios!</p>
+    </header>
+
+    <div class="container">
+
+        <!-- SECÇÃO 1: O QUE É HTML (ABAS INTERATIVAS) -->
+        <section id="sec-1">
+            <h2><span>🧱</span> 1. O que é HTML?</h2>
+            <p><strong>HTML</strong> (<em>HyperText Markup Language</em>) é o esqueleto de qualquer site. Ele não é uma linguagem de programação, mas sim de <strong>marcação</strong>.</p>
+            
+            <p>Clique nos cards abaixo para entender como as tecnologias Front-End trabalham em equipe:</p>
+
+            <div class="trinity-grid">
+                <div class="trinity-card active" data-tech="html">
+                    <div class="trinity-icon">🦴</div>
+                    <h3>HTML</h3>
+                    <p>O Esqueleto</p>
+                </div>
+                <div class="trinity-card" data-tech="css">
+                    <div class="trinity-icon">🎨</div>
+                    <h3>CSS</h3>
+                    <p>A Aparência</p>
+                </div>
+                <div class="trinity-card" data-tech="js">
+                    <div class="trinity-icon">🧠</div>
+                    <h3>JavaScript</h3>
+                    <p>O Cérebro</p>
+                </div>
+            </div>
+
+            <!-- Painel Dinâmico da Tecnologia -->
+            <div id="tech-info" class="tech-info-box">
+                <h4 id="tech-title">🦴 HTML (Estrutura)</h4>
+                <p id="tech-desc">Responsável por colocar os títulos, parágrafos, imagens e botões na tela. Sem ele, a página não tem conteúdo!</p>
+            </div>
+        </section>
+
+        <!-- SECÇÃO 2: ANATOMIA DA TAG -->
+        <section id="sec-2">
+            <h2><span>🔍</span> 2. Anatomia de uma Tag HTML</h2>
+            <p>Passe o mouse ou toque nos blocos para entender cada pedaço de um elemento HTML:</p>
+
+            <div class="tag-anatomy">
+                <span class="anatomy-part tag-open" data-info="Tag de Abertura: Indica onde o elemento começa.">&lt;a</span>
+                <span class="anatomy-part attr-name" data-info="Nome do Atributo: Dá uma propriedade especial à tag.">href</span>=<span class="anatomy-part attr-val" data-info="Valor do Atributo: O endereço/link de destino.">"https://google.com"</span>&gt;
+                <span class="anatomy-part content" data-info="Conteúdo: O texto que fica visível na tela para o usuário.">Acessar o Google</span>
+                <span class="anatomy-part tag-close" data-label="Tag Fechamento" data-info="Tag de Fechamento: Indica onde o elemento termina (possui a barra /).">&lt;/a&gt;</span>
+            </div>
+
+            <div id="anatomy-explanation" class="explanation-tooltip">
+                Passe o cursor sobre os elementos acima para ver a explicação aqui!
+            </div>
+        </section>
+
+        <!-- SECÇÃO 3: EDITOR DE CÓDIGO AO VIVO (PLAYGROUND) -->
+        <section id="sec-3">
+            <h2><span>⚡</span> 3. Laboratório ao Vivo (Experimente Agora!)</h2>
+            <p>Edite o código HTML na caixa da esquerda e veja o resultado ser gerado em tempo real à direita:</p>
+
+            <div class="editor-container">
+                <div class="editor-box">
+                    <label for="code-input">✍️ Escreva seu HTML aqui:</label>
+                    <textarea id="code-input" spellcheck="false">&lt;h2 style="color: #e34f26;"&gt;Meu Primeiro Teste!&lt;/h2&gt;
+&lt;p&gt;Estou aprendendo HTML de forma &lt;strong&gt;interativa&lt;/strong&gt;!&lt;/p&gt;
+&lt;button style="padding: 8px 16px; background: #0284c7; color: white; border: none; border-radius: 4px; cursor: pointer;"&gt;Clique aqui&lt;/button&gt;</textarea>
+                </div>
+
+                <div class="preview-box">
+                    <label>👁️ Resultado no Navegador:</label>
+                    <div id="code-preview"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECÇÃO 4: DESAFIO & QUIZ DE CONHECIMENTO -->
+        <section id="sec-4">
+            <h2><span>🎯</span> 4. Desafio Rápido: Teste seus Conhecimentos</h2>
+            <p>Responda à questão para testar o que aprendeu até aqui:</p>
+
+            <div class="quiz-container">
+                <p class="quiz-question">Qual das opções abaixo é a estrutura correta para criar um link em HTML?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" data-correct="false">&lt;link src="site.com"&gt;Meu Link&lt;/link&gt;</button>
+                    <button class="quiz-btn" data-correct="true">&lt;a href="https://site.com"&gt;Meu Link&lt;/a&gt;</button>
+                    <button class="quiz-btn" data-correct="false">&lt;url href="site.com"&gt;Meu Link&lt;/url&gt;</button>
+                </div>
+                <div id="quiz-feedback" class="quiz-feedback hidden"></div>
+            </div>
+        </section>
+
+        <!-- SECÇÃO 5: PRÓXIMOS PASSOS E FONTES DE ESTUDO -->
+        <section id="sec-5">
+            <h2><span>🚀</span> 5. Para Onde Ir Agora?</h2>
+            <p>Parabéns por dar os primeiros passos! O universo Front-End é incrível. Aqui estão os melhores guias e documentações gratuitas para você se aprofundar:</p>
+
+            <div class="resources-grid">
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" class="resource-card">
+                    <h4>MDN Web Docs ↗</h4>
+                    <p>A bíblia do desenvolvimento web. Excelente para consultar tags e regras.</p>
+                </a>
+
+                <a href="https://www.w3schools.com/html/" target="_blank" class="resource-card">
+                    <h4>W3Schools ↗</h4>
+                    <p>Tutoriais bem simples e rápidos para tirar dúvidas e praticar.</p>
+                </a>
+
+                <a href="https://www.freecodecamp.org/portuguese/learn/" target="_blank" class="resource-card">
+                    <h4>freeCodeCamp ↗</h4>
+                    <p>Aprenda na prática construindo projetos e conquistando certificados de graça.</p>
+                </a>
+            </div>
+
+            <!-- CALL TO ACTION MOTIVACIONAL -->
+            <div class="cta-next-level">
+                <h3>Pronto para deixar esse esqueleto bonito?</h3>
+                <p>O HTML é só o começo. O próximo nível é dominar o <strong>CSS</strong> e dar vida, cores e layouts modernos ao seu site!</p>
+                <button id="btn-continue" class="btn-primary">Quero Aprender CSS Agora! 🔥</button>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Guia Interativo de Front-End • Mantenha a curiosidade acesa!</p>
+    </footer>
+
+    <script src="../../js/fases-normal.js"></script>
 </body>
 </html>
