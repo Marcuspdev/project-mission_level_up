@@ -54,12 +54,6 @@ if(mundoNormal) {
     mundoNormal.addEventListener('mouseleave', function() {
         audioMundoNormal.pause();
     });
-    mundoNormal.addEventListener('mouseenter', function() {
-        audioMundoNormal.play();
-    });
-    mundoNormal.addEventListener('mouseleave', function() {
-        audioMundoNormal.pause();
-    });
 };
 
 const mundoInvertido = document.querySelector('#mundo-invertido');

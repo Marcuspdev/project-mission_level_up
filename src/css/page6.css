@@ -13,7 +13,7 @@ html, body {
     overflow: hidden;
 }
 
-.mapanormal-container {
+.mapainvertido-container {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -35,12 +35,14 @@ a:hover {
     color:rgb(110, 0, 174);
 }
 
+/*
 .mapainvertido-container {
     position: relative;
     display: flex;
     width: 100%;
     max-width: 1200px;
 }
+*/
 
 .barra-fora {
     position: absolute; left: 1%; top: 7%;
@@ -97,16 +99,13 @@ a:hover {
     width: 140px;
     height: auto;
 }
+
 #avatar {
     width: auto;
     height: 180px;
-    display: flex;
-
-    position: absolute; left: 09%; bottom: 69%;
-
+    display: block;
     position: absolute; left: 7%; bottom: 69%;
     z-index: 1;
-
 }
 
 button {
