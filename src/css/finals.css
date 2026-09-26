@@ -23,13 +23,13 @@ html, body {
   animation: glitch-intenso 1.5s infinite;
 }
 
-.final-dustin img {
+.final-dustin img, .final-eddie img, .final-gorgon img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.final-dustin {
+.final-dustin, .final-eddie, .final-gorgon {
   position: relative; /* Garante que o botão fique preso dentro da imagem */
   width: 100vw;
   height: 100vh;

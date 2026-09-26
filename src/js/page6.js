@@ -2,14 +2,14 @@
 
 const dados = new URLSearchParams(window.location.search);
 
-const avatarEscolhido = dados.get('avatar');
+const avatarEscolhido = dados.get('avatar') || 'dustin';
 const nivelAtual = Number(dados.get('nivel') || 0);
 const avatarImg = document.querySelector('#avatar');
 const avatarHead = document.querySelector('#cabeça');
 
 if (avatarImg && avatarHead) {
-    avatarImg.src = "../assets/images/" + avatarEscolhido + ".png"
-    avatarHead.src = "../assets/images/cabeça" + avatarEscolhido + ".png"
+    avatarImg.src = `../assets/images/${avatarEscolhido}.png`;
+    avatarHead.src = `../assets/images/cabeça${avatarEscolhido}.png`;
 }
 
 // Seleciona os elementos de nível invertido
@@ -22,25 +22,27 @@ const nivelInvertido5 = document.querySelector('#invertido5');
 
 // Muda a posição do Avatar segundo seu nível
 
-if (nivelAtual == 1) {
-    avatarImg.style.left = '7%'
-    avatarImg.style.bottom = '69%'
-}
-else if (nivelAtual == 2) {
-    avatarImg.style.left = '27%'
-    avatarImg.style.bottom = '44%'
-}
-else if (nivelAtual == 3) {
-    avatarImg.style.left = '45.1%'
-    avatarImg.style.bottom = '49%'
-}
-else if (nivelAtual == 4) {
-    avatarImg.style.left = '61.5%'
-    avatarImg.style.bottom = '42%'
-}
-else if (nivelAtual == 5) {
-    avatarImg.style.left = '84%'
-    avatarImg.style.bottom = '67.5%'}
+if (avatarImg) {
+    if (nivelAtual == 1) {
+        avatarImg.style.left = '7%'
+        avatarImg.style.bottom = '69%'
+    }
+    else if (nivelAtual == 2) {
+        avatarImg.style.left = '27%'
+        avatarImg.style.bottom = '44%'
+    }
+    else if (nivelAtual == 3) {
+        avatarImg.style.left = '45.1%'
+        avatarImg.style.bottom = '49%'
+    }
+    else if (nivelAtual == 4) {
+        avatarImg.style.left = '61.5%'
+        avatarImg.style.bottom = '42%'
+    }
+    else if (nivelAtual == 5) {
+        avatarImg.style.left = '84%'
+        avatarImg.style.bottom = '67.5%'}
+};
 
 // Verifica em qual nível o jogador está e desabilita os níveis anteriores & Redireciona para a página correspondente ao nível invertido selecionado, passando o avatar e o nível como parâmetros na URL
 
