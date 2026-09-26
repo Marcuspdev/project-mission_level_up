@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../src/css/finals.css">
+    <link rel="stylesheet" href="../../css/finals.css">
     <title> Final - Eddie </title>
 </head>
 <body>
+
+    <audio autoplay loop id="final-music" src="../../assets/audios/finaleddieaudio.mp3" type="audio/mp3"></audio>
     <section class="final-eddie">
-        <img src="../../src/assets/images/finaleddie.png">
+        
+        <button id="btn-audio-normal" class="btn-audio" onclick="alternarAudio()">
+            <span id="icone-audio">🔊</span>
+        </button>
+        <div class="tv-scanlines-normal"></div>
+        <img src="../../assets/images/finaleddie.png">
     </section>
+
+     <script src="../../js/final.js"></script>
 </body>
 </html>

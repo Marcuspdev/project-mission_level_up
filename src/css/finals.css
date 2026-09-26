@@ -122,10 +122,69 @@ html, body {
   align-items: center;
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
   outline: none;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 #icone-audio {
   font-size: 22px;
   color: #ffffff;
   user-select: none;
+}
+
+.final-dustin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.final-dustin {
+  position: relative; /* Garante que o botão fique preso dentro da imagem */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+/* Efeito CRT / Scanlines para o estilo retro */
+.tv-scanlines-normal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 10;
+  pointer-events: none; /* Permite clicar através do efeito */
+}
+
+/* Camada de Linhas de TV Antiga (Scanlines) */
+.tv-scanlines-inverse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 3;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.4) 50%
+  );
+  background-size: 100% 4px; /* Cria o efeito de linhas finas de monitor */
+}
+
+#btn-audio-normal {
+  border: 2px solid #ffcc00; /* Borda amarelada para o Mundo Normal */
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.9);
+}
+#btn-audio-normal:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
 }
