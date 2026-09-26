@@ -38,10 +38,6 @@ a:hover {color: crimson;}
 }
 
 
-.vidas {
-    display: flex;
-    position: absolute; left: 111.5% ; bottom: 83%; 
-
 #cabeça-vidas {
     position: absolute; right: 30px; top: 40px;
     display: flex;
@@ -133,13 +129,6 @@ button {
     border-radius: 50%;
 }
 
-#normal1 { left: 25%;   bottom: 48%; }
-#normal2 { left: 46.5%;  bottom: 10.3%; }
-#normal3 { left: 76.5%;  bottom: 33.4%; }
-#normal4 { left: 67.3%;  bottom: 39%; }
-#normal5 { left: 94.8%;  bottom: 49%; }
-#normal6 { left: 65.8%;  bottom: 16.6%; }
-=======
 #normal0 { left: 20%;   bottom: 49%; }
 #normal1 { left: 37%;  bottom: 11%; }
 #normal2 { left: 60.5%;  bottom: 34.1%; }

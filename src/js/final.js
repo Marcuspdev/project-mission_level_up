@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const audio = document.getElementById('final-music');
   const iconeAudio = document.getElementById('icone-audio');
-  const btnAudio = document.getElementById('btn-audio');
+  const btnAudio = document.querySelector('.btn-audio');
 
   // Ajusta o ícone inicial de acordo com o estado do áudio ao carregar
   if (audio && iconeAudio) {
