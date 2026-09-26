@@ -5,6 +5,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mapanormal-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
 body {
   overflow-x: hidden;
@@ -44,34 +58,35 @@ a:hover {color: crimson;}
 }   /* ← fecha aqui */
 
 #cabeça-vidas {
-    position: absolute; right: 30px; top: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: flex;
     align-items: center;
-    gap: 30px;
-}
-#vidas {
-    width: 140px;
-    height: auto;
+    gap: 20px;
+    z-index: 5;
 }
 
 #cabeça {
     width: 94px;
     height: 94px;
-    display: flex;
-    align-items: center;
     animation: piscar 2s infinite;
-
-    position: absolute; left: 105%; bottom: 88.5%;
+    /* remover completamente o position: absolute e o left/bottom daqui */
 }
+
+#vidas {
+    width: 140px;
+    height: auto;
+
 .avatar {
-    width: 200px;
-    height: 180px;
-    display: flex;
-    position: absolute; left: 22.5%; bottom: 50%;
-    z-index: 0;
-
+    position: absolute;
+    left: 20%;    /* mesmas coordenadas do #normal1, por exemplo */
+    bottom: 49%;
+    width: 90px;
+    height: auto;
+    transform: translate(-30%, -100%); /* levanta o personagem acima do botão */
+    z-index: 2;
 }
-
 #avatar {
     width: auto;
     height: 180px;
