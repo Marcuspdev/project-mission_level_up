@@ -77,7 +77,7 @@ a:hover {color: crimson;}
 #vidas {
     width: 140px;
     height: auto;
-
+}
 .avatar {
     position: absolute;
     left: 20%;    /* mesmas coordenadas do #normal1, por exemplo */
