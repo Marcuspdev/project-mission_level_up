@@ -1,31 +1,45 @@
 # 🛸 As Coisas Estranhas do Front-End — Gamified Roadmap
 
+![Project Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-red?style=for-the-badge)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+[![License](https://img.shields.io/badge/License-Educational-lightgrey?style=for-the-badge)](#-licença)
 
-Uma aplicação web gamificada e interativa inspirada no universo de **Stranger Things**. O projeto atua como um **Roadmap de Estudos em Desenvolvimento Front-End**, utilizando elementos narrativos, escolha de personagens e cenários da série para transformar o aprendizado de **HTML, CSS e JavaScript** em uma jornada imersiva.
-
----
-
-## 🗺️ A Jornada (Fluxo da Aplicação)
-
-A aplicação é estruturada no formato *Single-Page Application* (SPA), conduzindo o usuário por etapas narrativas:
-
-1. **Abertura Cinematográfica:** Vinheta em vídeo com controles de áudio/vídeo e transição direta para o jogo.
-2. **Tela de Boas-Vindas:** Apresentação temática com estética retrô *Neon Red* e tipografia 8-bit.
-3. **Seleção de Avatar:** O estudante escolhe seu personagem (Dustin, Eddie, Demogorgon, etc.) para representá-lo na jornada.
-4. **Seleção de Mundo:** Escolha entre explorar o **Mundo Normal** (Conceitos Básicos) ou o **Mundo Invertido** (Desafios Avançados do Front-End).
-5. **Mapa Interativo do Roadmap:** Navegação pelos pontos-chave da cidade de Hawkins, onde cada localidade representa um módulo de aprendizado (HTML5, CSS3, DOM e JS Assíncrono).
-6. **Tela Final de Vitória:** Telas de encerramento e celebração ("Você salvou o Mundo Invertido") ao concluir todas as etapas do roadmap.
+Uma aplicação web gamificada e interativa inspirada no universo de **Stranger Things**. O projeto atua como um **Roadmap de Estudos em Desenvolvimento Front-End**, utilizando elementos narrativos, escolha de personagens e cenários da série para transformar o aprendizado de **HTML, CSS e JavaScript** em uma jornada imersiva — do "Mundo Normal" dos fundamentos até o "Mundo Invertido" da lógica avançada.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🎮 Sobre o Projeto
 
-* **HTML5:** Estrutura semântica das seções, tags de mídia e gerenciamento do estado das páginas.
-* **CSS3:** Estilização temática, tipografia *pixel art*, efeitos neon (`text-shadow`/`box-shadow`), layout responsivo e transições de tela.
-* **JavaScript (ES6+):** Controle da API de vídeo, manipulação do DOM, fluxo de navegação entre seções, escolha de avatares e mapas.
+A ideia central é simples: aprender front-end costuma ser uma jornada solitária e, às vezes, monótona. Por isso, transformamos esse caminho em uma **missão de RPG** ambientada em Hawkins. O jogador escolhe seu avatar, decide entre os dois mundos disponíveis e avança fase a fase, desbloqueando conceitos de HTML, CSS e JavaScript como se fossem estágios de um jogo — com progresso salvo, barra de XP e um vilão final para enfrentar no fim da trilha.
+
+---
+
+## 🕹️ Funcionalidades Principais
+
+* 🎬 **Abertura Cinematográfica** — Vinheta de entrada em vídeo com controles interativos de áudio/vídeo e transição suave para a partida.
+* 👾 **Seleção de Avatares** — Escolha de personagens icônicos em estilo Pixel Art (Dustin, Eddie, Demogorgon, entre outros), cada um com atributos e status próprios.
+* 🚲 **Escolha de Mundos:**
+  * **Mundo Normal** — 6 fases focadas em fundamentos de HTML5, estilização e layouts CSS.
+  * **Mundo Invertido** — 5 fases avançadas cobrindo manipulação do DOM, eventos, lógica e JavaScript assíncrono.
+* 🗺️ **Mapa Interativo de Hawkins** — Ponto de navegação dinâmico onde cada localidade representa um módulo de aprendizado.
+* 📊 **Sistema de Progresso** — Barra de XP e acompanhamento de evolução do jogador ao longo das fases.
+* 👥 **Página de Colaboradores (Player Cards)** — Seção temática no estilo RPG/Arcade retrô apresentando os desenvolvedores do projeto e suas competências.
+* 🏆 **Tela de Vitória** — Finalização épica e celebração ao concluir todas as fases e salvar o Mundo Invertido.
+
+---
+
+## 🧠 Trilha de Aprendizado
+
+O roadmap foi desenhado como uma progressão real de conhecimento, não apenas como decoração temática:
+
+| Mundo | Foco | Fases |
+|---|---|---|
+| 🌤️ **Mundo Normal** | HTML5 semântico, estilização com CSS, responsividade e layout (Flexbox/Grid) | 6 fases |
+| 🌑 **Mundo Invertido** | Lógica de programação, manipulação do DOM, eventos e JavaScript assíncrono | 5 fases |
+
+A cada fase concluída, o jogador acumula XP e desbloqueia a próxima etapa do mapa — reforçando conceitos antes de avançar para desafios mais complexos.
 
 ---
 
@@ -35,32 +49,91 @@ A aplicação é estruturada no formato *Single-Page Application* (SPA), conduzi
 project-mission_level_up/
 │
 ├── src/
-│   ├── assets/
-│   │   ├── fonts/         # Fontes temáticas retro/pixel
-│   │   ├── icons/         # Ícones da interface (corações/vida, controles)
-│   │   ├── img/           # Sprites dos avatares, mapas de Hawkins e telas finais
-│   │   └── videos/        # Vinheta de entrada em vídeo
+│   ├── assets/                 # Imagens, ícones e vídeos do projeto
+│   │   ├── images/              # Artes dos personagens, cenários e ícones
+│   │   └── videos/               # Vinhetas e animações
 │   │
-│   ├── css/
-│   │   ├── page1.css      # Estilos do player e tela de vídeo
-│   │   └── page2.css      # Estilos da tela de boas-vindas, avatares e mapas
+│   ├── css/                   # Folhas de estilo, temas néon e layouts responsivos
 │   │
-│   └── js/
-│       ├── page1.js       # Lógica do vídeo e transição inicial
-│       └── page2.js       # Controle de seleção de avatares, mundos e progresso
+│   ├── js/                    # Scripts de manipulação do DOM, fluxo do jogo e progresso
+│   │   ├── fases-mundo-invertido.js
+│   │   ├── fases-mundo-normal.js
+│   │   ├── final.js
+│   │   ├── page1.js ... page5.js
+│   │
+│   └── pages/                 # Módulos e páginas do jogo
+│       ├── normal-fases/      # Fases 1 a 6 do Mundo Normal (HTML & CSS)
+│       │   ├── nor-fase1.html
+│       │   └── ...
+│       ├── inverse-fases/     # Fases 1 a 5 do Mundo Invertido (JavaScript)
+│       │   ├── inver-fase1.html
+│       │   └── ...
+│       ├── finals/            # Telas de encerramento e vitória
+│       ├── colaboradores.html # Créditos e Player Cards dos desenvolvedores
+│       ├── mundo-normal.html  # Seleção de fases do Mundo Normal
+│       └── mundo-invertido.html # Seleção de fases do Mundo Invertido
 │
-├── index.html             # Estrutura principal de todas as telas (SPA)
-└── README.md              # Documentação do projeto
+├── index.html                 # Ponto de entrada da aplicação (SPA)
+├── LICENSE                    # Licença do projeto
+└── README.md                  # Documentação principal
 ```
-## 💻 Como Rodar o código
-1. **Clonar o Repositório**
-   ```bash
-   git clone [https://github.com/Marcuspdev/project-mission_level_up.git](https://github.com/Marcuspdev/project-mission_level_up.git)
- 2. **Acessar a pasta do projeto**
-  ```bash
- cd project-mission_level_up
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **HTML5** — Estruturação semântica de todas as páginas e fases.
+* **CSS3** — Estilização temática (néon, pixel art, retrô), animações e responsividade.
+* **JavaScript (Vanilla)** — Lógica do jogo, controle de fases, manipulação do DOM e sistema de progresso.
+
+---
+
+## 👥 Equipe e Colaboradores
+
+| Jogador | Classe / Responsabilidade | Redes Sociais |
+|---|---|---|
+| **Arthur Kauã** | Idealizador & Web Developer (HTML/CSS) | — |
+| **Marcus Paulo** | JavaScript Specialist (Lógica & DOM) | — |
+| **Andrew Rafael** | Web Developer (HTML/CSS) | — |
+
+---
+
+## 💻 Como Rodar o Projeto
+
+**1. Clonar o repositório:**
+
+```bash
+git clone https://github.com/Marcuspdev/project-mission_level_up.git
 ```
-3. **Acessar o index html**
+
+**2. Acessar a pasta do projeto:**
+
+```bash
+cd project-mission_level_up
+```
+
+**3. Executar a aplicação:**
+
+Abra o arquivo `index.html` diretamente no seu navegador, ou utilize a extensão **Live Server** no VS Code para uma melhor experiência (recarregamento automático e suporte correto a caminhos relativos).
+
+---
+
+## 🗺️ Roadmap Futuro
+
+* [ ] Salvar progresso do jogador em `localStorage`
+* [ ] Adicionar novas fases ao Mundo Invertido (async/await, fetch, APIs)
+* [ ] Sistema de conquistas (badges) por fase concluída
+* [ ] Versão responsiva completa para dispositivos móveis
+* [ ] Trilha sonora e efeitos sonoros temáticos
+
+---
 
 ## 📄 Licença
-Este projeto é voltado para fins educacionais e de portfólio. Todos os direitos sobre os elementos visuais da série pertencem aos seus respectivos criadores.
+
+Este projeto é voltado **estritamente para fins educacionais e de portfólio**. Todos os direitos sobre os elementos visuais e o universo da série *Stranger Things* pertencem aos seus respectivos criadores (Netflix / Duffer Brothers).
+
+---
+
+<p align="center">
+  Feito com 💡 e um pouco de Mundo Invertido por <strong>Arthur Kauã</strong>, <strong>Marcus Paulo</strong> e <strong>Andrew Rafael</strong>
+</p>
