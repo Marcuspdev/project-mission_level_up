@@ -41,14 +41,18 @@ if(gorgon) {
 // Quando o mundo for escolhido
 
 const mundoNormal = document.querySelector('#mundo-normal');
-const mundoInvertido = document.querySelector('#mundo-invertido');
-const audioMundoInvertido = new Audio('src/assets/audios/mundoinvertidoaudio.mp3');
 const audioMundoNormal = new Audio('src/assets/audios/mundonormalaudio.mp3');
-
 
 if(mundoNormal) {
     mundoNormal.addEventListener('click', function() {
         window.location.href = "src/pages/mundo-normal.html?avatar=" + avatar + "&nivel=" + nivel;
+
+    });
+    mundoNormal.addEventListener('mouseenter', function() {
+        audioMundoNormal.play();
+    });
+    mundoNormal.addEventListener('mouseleave', function() {
+        audioMundoNormal.pause();
     });
     mundoNormal.addEventListener('mouseenter', function() {
         audioMundoNormal.play();
@@ -57,6 +61,9 @@ if(mundoNormal) {
         audioMundoNormal.pause();
     });
 };
+
+const mundoInvertido = document.querySelector('#mundo-invertido');
+const audioMundoInvertido = new Audio('src/assets/audios/mundoinvertidoaudio.mp3');
 
 if(mundoInvertido) {
     mundoInvertido.addEventListener('click', function() {
